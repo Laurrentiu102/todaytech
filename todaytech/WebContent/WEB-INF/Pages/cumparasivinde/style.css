@@ -1,0 +1,51 @@
+
+html, body ,section{height:100%;margin: 0; height: 100%; overflow: hidden}
+
+body {
+    color: #fff;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left {
+    background-color: #f26522;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+	padding: 1rem;
+}
+
+.right {
+    background-color: #f26522;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    padding: 1rem;
+}
+
+.left:hover{
+	-webkit-transition: transform 0.5s ease-in-out;
+    transform: scale(0.95);
+}
+.right:hover{
+	-webkit-transition: transform 0.5s ease-in-out;
+	transform: scale(0.95);
+}
+.left h1 {
+    font-family: Arial;
+    font-size: 6rem;
+}
+
+.right h1 {
+    font-family: Arial;
+    font-size: 6rem;
+}

@@ -1,0 +1,11 @@
+CREATE TABLE `CONTURI` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nume` varchar(45) NOT NULL,
+  `prenume` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `parola` varchar(200) NOT NULL,
+  `telefon` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email_UNIQUE` (`email`),
+  UNIQUE KEY `telefon_UNIQUE` (`telefon`)
+)

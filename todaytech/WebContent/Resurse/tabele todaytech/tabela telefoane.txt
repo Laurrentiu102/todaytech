@@ -1,0 +1,10 @@
+CREATE TABLE `TELEFOANE` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `brand` varchar(45) NOT NULL,
+  `model` varchar(45) NOT NULL,
+  `mem_interna` varchar(45) NOT NULL,
+  `pret` int NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `brand_UNIQUE` (`brand`),
+  UNIQUE KEY `model_UNIQUE` (`model`)
+)

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+<title>TodayTech</title>
+<style>
+html, body {margin: 0; height: 102%; overflow: hidden}
+.navbar {
+  z-index: 9;
+  overflow: hidden;
+  background-color: #333;
+  margin-top: 100px;
+  position: absolute;
+  align: right;
+  top: 0;
+  width: 20%;
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+${email}
+</div>
+<section class="container">
+    <div class="left">
+			<a style="text-decoration:none;color:white" href="${pageContext.request.contextPath}/vindeS">
+				<h1>Vinde</h1>
+			</a>
+    </div>
+    <div class="right">
+			<a style="text-decoration:none;color:white" href="${pageContext.request.contextPath}/cumparaS">
+				<h1>Cumpara</h1>
+			</a>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>TodayTech</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'><link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="container">
+	<div class="header">
+		<h2>Creeaza cont</h2>
+	</div>
+	</form>
+	<form id="form" class="form" name="form" method="post" action="${pageContext.request.contextPath}/registerS">
+		<div class="form-control">
+			<label style="color:red;">Nume</label>
+			<input type="text" placeholder="Nume" id="nume" name="nume" />
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small style="${colorn};"></small>
+		</div>
+		<div class="form-control">
+			<label>Prenume</label>
+			<input type="text" placeholder="Prenume" id="prenume" name="prenume"/>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small color="red"></small>
+		</div>
+		<div class="form-control">
+			<label>Email</label>
+			<input type="text" placeholder="Email" id="email" name="email"/>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+		<div class="form-control">
+			<label>Numar telefon</label>
+			<input type="text" placeholder="Numar telefon" id="nrtel" name="nrtel"/>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+		<div class="form-control">
+			<label>Parola</label>
+			<input type="password" placeholder="Parola" id="password" name="password"/>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+		<div class="form-control">
+			<label>Confirmare parola</label>
+			<input type="password" placeholder="Confirmare parola" id="password2" name="password2"/>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+		<p class="form-control" style="text-align:center;">Ai un cont?<br><a style="text-decoration:none;color:black" href="${pageContext.request.contextPath}/loginS"><b>Intra in cont!<b></a></p>
+	</form>
+	<button type="submit" form="form" value="Submit">Inregistrare cont</button>
+</div>
+</body>
+</html>

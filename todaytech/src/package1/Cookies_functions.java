@@ -1,5 +1,5 @@
 package package1;
-//Se vede?
+
 import java.security.NoSuchAlgorithmException;
 import java.sql.SQLException;
 

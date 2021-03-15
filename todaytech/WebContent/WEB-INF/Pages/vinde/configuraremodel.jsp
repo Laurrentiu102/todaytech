@@ -6,6 +6,7 @@
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Resurse/demo.css"/>
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Resurse/easydropdown.css"/>
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Resurse/butontermina.css">
 		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
 		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -13,7 +14,24 @@
 <title>Insert title here</title>
 <style>
 
+
+.pretcss{
+	margin-top:-2%;
+	display: block;
+    font-size: 25px;
+    line-height: 1;
+    color: #000;
+    
+    padding: 9px 12px;
+    overflow: hidden;
+    white-space: nowrap;
+}
 .buttonContinua {
+	font-family: 'CopenhagenGroteskNova', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	margin-left: auto;
+    margin-right: auto;
+    
+	text-align: center;
 	box-shadow: 0px 0px 17px 4px #fafafa;
 	background-color:#f26422;
 	border-radius:4px;
@@ -21,12 +39,11 @@
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
-	font-size:13px;
-	font-weight:bold;
-	padding:10px 28px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ebebeb;
+	font-size:1.3rem;
+	margin-top:2%;
+	font-weight:500;
+	padding:.875rem 1rem;
+	box-sizing: content-box;
 }
 .buttonContinua:hover {
 	background-color:#f26422;
@@ -118,13 +135,28 @@ h3{
 }
 
 </style>
+<script>
+	function setPret()
+	{
+		var n="";
+		if(form.cond[form.cond.selectedIndex].text.localeCompare("Ca nou")==0)
+			n="2500";
+		else if(form.cond[form.cond.selectedIndex].text.localeCompare("Excelent")==0)
+			n="2200";
+		else if(form.cond[form.cond.selectedIndex].text.localeCompare("Foarte bun")==0)
+			n="1900";
+		else
+			n="1600";
+			document.getElementById('pret').innerHTML=("Pret: "+n+" lei");
+	}
+</script>
 </head>
 <body>
 <div class="divsus"></div>
 <div class="bara-fundal"><span class="bara" style="width: 60%;"></span></div>
 <h1 style="font-size:50px;text-align:center;margin-top:3%">Configureaza ${model}</h1>
 <div class="configurare">
-<form id="form" class="form" method="post" action="/action_page.php">
+<form id="form" class="form" name="form" method="post" action="/action_page.php">
   <select tabindex="4" class="dropdown" data-settings='{"cutOff": 4}'>
     <option value="Culoare" class="label">Culoare</option>
     <option value="Rosu" class="label">Rosu</option>
@@ -146,15 +178,17 @@ h3{
     <option value="Vodafone">Vodafone</option>
     <option value="Digi">Digi</option>
   </select>
-  <select tabindex="4" class="dropdown" data-settings='{"cutOff": 4}'>
+  <select tabindex="4" name="cond" onchange="setPret()" class="dropdown" data-settings='{"cutOff": 4}'>
     <option value="Conditia telefonului" class="label">Conditita telefonului</option>
     <option value="Ca_nou">Ca nou</option>
     <option value="Excelent">Excelent</option>
     <option value="Foarte bun">Foarte bun</option>
     <option value="Bun">Bun</option>
   </select>
-  <img style="margin-left:10%;max-width: 30rem;height: 30rem;" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg" alt="symbol image">
-  <button class="buttonContinua">Conecteaza-te</button>
+  <label class="pretcss" id="pret" placeholder="Pret"></label>
+  <img style="margin-left:auto;margin-right:auto;max-width: 30rem;height: 30rem;" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg" alt="symbol image">
+  <br>
+  <button class="buttonContinua" >Finalizeaza</button>
 </form>
 </div>
 </body>

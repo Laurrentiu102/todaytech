@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Resurse/demo.css"/>
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Resurse/easydropdown.css"/>
-		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Resurse/butontermina.css">
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Resurse/finalizeazaButton.css">
 		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
 		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -138,16 +138,31 @@ h3{
 <script>
 	function setPret()
 	{
-		var n="";
+		var s="";
 		if(form.cond[form.cond.selectedIndex].text.localeCompare("Ca nou")==0)
-			n="2500";
+			s="2500";
 		else if(form.cond[form.cond.selectedIndex].text.localeCompare("Excelent")==0)
-			n="2200";
+			s="2200";
 		else if(form.cond[form.cond.selectedIndex].text.localeCompare("Foarte bun")==0)
-			n="1900";
+			s="1900";
 		else
-			n="1600";
-			document.getElementById('pret').innerHTML=("Pret: "+n+" lei");
+			s="1600";
+		
+		var m=1;
+		if(form.cond[form.cond.selectedIndex].text=="Conditia telefonului" || form.mem_int[form.mem_int.selectedIndex].text=="Memorie interna" || form.retea[form.retea.selectedIndex].text=="Retea" || form.culoare[form.culoare.selectedIndex].text=="Culoare")
+			m=0;
+		
+		if(m==0){
+			var x = document.getElementById("container");
+			x.style.display = "none";
+		}else{
+			var x = document.getElementById("container");
+			x.style.display = "block";
+			document.getElementById('pret').innerHTML=("Pret: "+s+" lei");
+		}
+	}
+	
+	function afiseazaFinalizare(){
 	}
 </script>
 </head>
@@ -157,38 +172,45 @@ h3{
 <h1 style="font-size:50px;text-align:center;margin-top:3%">Configureaza ${model}</h1>
 <div class="configurare">
 <form id="form" class="form" name="form" method="post" action="/action_page.php">
-  <select tabindex="4" class="dropdown" data-settings='{"cutOff": 4}'>
+  <select tabindex="4" name="culoare" onchange="setPret()" class="dropdown" data-settings='{"cutOff": 4}'>
     <option value="Culoare" class="label">Culoare</option>
     <option value="Rosu" class="label">Rosu</option>
     <option value="Alb">Alb</option>
     <option value="Negru">Negru</option>
     <option value="Gri">Gri</option>
   </select>
-  <select tabindex="4" class="dropdown" data-settings='{"cutOff": 4}'>
+  <select tabindex="4" name="mem_int" onchange="setPret()" class="dropdown" data-settings='{"cutOff": 4}'>
     <option value="Memorie interna" class="label">Memorie interna</option>
     <option value="64GB" class="label">64GB</option>
     <option value="128GB">128GB</option>
     <option value="256GB">256GB</option>
     <option value="512GB">512GB</option>
   </select>
-  <select tabindex="4" class="dropdown" data-settings='{"cutOff": 4}'>
-    <option value="Reteaua" class="label">Reteaua</option>
+  <select tabindex="4" onchange="setPret()" name="retea" class="dropdown" data-settings='{"cutOff": 4}'>
+    <option value="Reteaua" class="label">Retea</option>
     <option value="Deblocat" class="label">Deblocat</option>
     <option value="Orange">Orange</option>
     <option value="Vodafone">Vodafone</option>
     <option value="Digi">Digi</option>
   </select>
   <select tabindex="4" name="cond" onchange="setPret()" class="dropdown" data-settings='{"cutOff": 4}'>
-    <option value="Conditia telefonului" class="label">Conditita telefonului</option>
+    <option value="Conditia telefonului" class="label">Conditia telefonului</option>
     <option value="Ca_nou">Ca nou</option>
     <option value="Excelent">Excelent</option>
     <option value="Foarte bun">Foarte bun</option>
     <option value="Bun">Bun</option>
   </select>
-  <label class="pretcss" id="pret" placeholder="Pret"></label>
-  <img style="margin-left:auto;margin-right:auto;max-width: 30rem;height: 30rem;" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg" alt="symbol image">
+  <label class="pretcss" id="pret">&nbsp</label>
+  <img style="margin-left:auto;margin-right:auto;max-width: 30rem;height: 30rem;" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/${poza}" alt="symbol image">
   <br>
-  <button class="buttonContinua" >Finalizeaza</button>
+  <div id="container" style="margin-top:2%;display:none">
+  <button class="learn-more">
+    <span class="circle" aria-hidden="true">
+      <span class="icon arrow"></span>
+    </span>
+    <span class="button-text">Finalizeaza</span>
+  </button>
+</div>
 </form>
 </div>
 </body>

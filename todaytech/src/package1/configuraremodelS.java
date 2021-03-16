@@ -26,7 +26,8 @@ public class configuraremodelS extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setAttribute("model", request.getParameter("model").replace('_', ' '));
+		request.setAttribute("model", request.getParameter("model").replaceAll("_", " "));
+		request.setAttribute("poza",request.getParameter("model").replaceAll("_", "").toLowerCase()+".jpg");
 		request.getRequestDispatcher("/WEB-INF/Pages/vinde/configuraremodel.jsp").forward(request, response);
 	}
 

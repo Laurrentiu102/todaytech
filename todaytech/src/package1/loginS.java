@@ -78,10 +78,11 @@ public class loginS extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setAttribute("email", request.getParameter("email"));
-		request.getRequestDispatcher("/cumparasivindeS").forward(request, response);
+		//codul fara baza de date
+		/*request.setAttribute("email", request.getParameter("email"));
+		request.getRequestDispatcher("/cumparasivindeS").forward(request, response);*/
 		//CODUL BUN
-		/*try {
+		try {
 			if(verificareCont(request,response)==false) {
 				request.setAttribute("emailvalue", request.getParameter("email"));
 				request.setAttribute("vis", "visible");
@@ -98,7 +99,7 @@ public class loginS extends HttpServlet {
 			}
 		} catch (NoSuchAlgorithmException | ClassNotFoundException | SQLException | ServletException | IOException e) {
 			e.printStackTrace();
-		}*/
+		}
 	}
 
 }

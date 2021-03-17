@@ -55,7 +55,7 @@ ${email}<a href="${pageContext.request.contextPath}/logout" class="myButton">Log
 </div>
 <section class="container">
     <div class="left">
-			<a style="text-decoration:none;color:white" href="${pageContext.request.contextPath}/vindeS">
+			<a style="text-decoration:none;color:white" href="${pageContext.request.contextPath}/vindeS?email=${email}">
 				<h1>Vinde</h1>
 			</a>
     </div>

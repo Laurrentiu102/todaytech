@@ -13,7 +13,7 @@ public class SQL {
 	private Connection getcon() throws SQLException, ClassNotFoundException {
 			String myDriver = "com.mysql.cj.jdbc.Driver";
 			Class.forName(myDriver);
-			String host="jdbc:mysql://46.214.23.220:3306/TodayTech";
+			String host="jdbc:mysql://46.214.23.220:3430/TodayTech";
 			String user="todaytech";
 			String password="a072263819";
 			//"jdbc:mysql://46.214.23.220:3306"

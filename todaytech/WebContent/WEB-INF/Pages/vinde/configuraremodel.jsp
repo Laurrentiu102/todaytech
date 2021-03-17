@@ -171,7 +171,7 @@ h3{
 <div class="bara-fundal"><span class="bara" style="width: 60%;"></span></div>
 <h1 style="font-size:50px;text-align:center;margin-top:3%">Configureaza ${model}</h1>
 <div class="configurare">
-<form id="form" class="form" name="form" method="post" action="/action_page.php">
+<form id="form" class="form" name="form" method="post" action="${pageContext.request.contextPath}/vindeFinalizare">
   <select tabindex="4" name="culoare" onchange="setPret()" class="dropdown" data-settings='{"cutOff": 4}'>
     <option value="Culoare" class="label">Culoare</option>
     <option value="Rosu" class="label">Rosu</option>

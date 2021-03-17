@@ -7,7 +7,19 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Resurse/galerieimagini.css"/>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/Resurse/vindemodel.css">
 <title>Insert title here</title>
-
+<script>
+	window.onload = function() {
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		const email = urlParams.get('email');
+		var a=""
+		for(var i=0;i<document.getElementsByTagName("a").length;i++){
+			var a=(document.getElementsByTagName("a")[i].href+email).substring((document.getElementsByTagName("a")[i].href+email).indexOf("/todaytech/"));
+			document.getElementsByTagName("a")[i].setAttribute("href", a); 
+			document.getElementById('labele').innerHTML=("Pret: "+a+" lei");
+		}
+	};
+</script>
 <style>
 h1{
     font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -72,107 +84,108 @@ a{
 </style>
 </head>
 <body>
+<label id="labele">asd</label>
 <div class="divsus"></div>
 <div class="bara-fundal"><span class="bara" style="width: 40%;"></span></div>
 <h1 style="font-size:50px;text-align:center">Selecteaza modelul tau de telefon</h1>
 <div style="margin-left:10%;margin-right:10%" class="gallery-grid">
-	<a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_SE_2020">
+	<a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_SE_2020&email=">
     <figure class="gallery-frame">
       <img class="gallery-img" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg" alt="symbol image">
       <figcaption><h4 style="margin-top:0;">iPhone SE 2020</h4></figcaption>
     </figure>
     </a>
-    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_11_Pro_Max">
+    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_11_Pro_Max&email=">
     <figure class="gallery-frame">
       <img class="gallery-img" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg" alt="symbol image">
       <figcaption><h4 style="margin-top:0;">iPhone 11 Pro Max</figcaption>
     </figure>
     </a>
-    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_11_Pro">
+    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_11_Pro&email=">
     <figure class="gallery-frame">
       <img class="gallery-img" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg" alt="symbol image">
       <figcaption><h4 style="margin-top:0;">iPhone 11 Pro</figcaption>
     </figure>
     </a>
-    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_11">
+    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_11&email=">
     <figure class="gallery-frame">
       <img class="gallery-img" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg" alt="symbol image">
       <figcaption><h4 style="margin-top:0;">iPhone 11</figcaption>
     </figure>
     </a>
-    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_XS_Max">
+    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_XS_Max&email=">
     <figure class="gallery-frame">
       <img class="gallery-img" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg" alt="symbol image">
       <figcaption><h4 style="margin-top:0;">iPhone XS Max</figcaption>
     </figure>
     </a>
-    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_XS">
+    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_XS&email=">
     <figure class="gallery-frame">
       <img class="gallery-img" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg" alt="symbol image">
       <figcaption><h4 style="margin-top:0;">iPhone XS</figcaption>
     </figure>
     </a>
-    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_XR">
+    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_XR&email=">
     <figure class="gallery-frame">
       <img class="gallery-img" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg" alt="symbol image">
       <figcaption><h4 style="margin-top:0;">iPhone XR</figcaption>
     </figure>
     </a>
-    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_X">
+    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_X&email=">
     <figure class="gallery-frame">
       <img class="gallery-img" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg" alt="symbol image">
       <figcaption><h4 style="margin-top:0;">iPhone X</figcaption>
     </figure>
     </a>
-    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_8_Plus">
+    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_8_Plus&email=">
     <figure class="gallery-frame">
       <img class="gallery-img" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg" alt="symbol image">
       <figcaption><h4 style="margin-top:0;">iPhone 8 Plus</figcaption>
     </figure>
     </a>
-    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_8">
+    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_8&email=">
     <figure class="gallery-frame">
       <img class="gallery-img" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg" alt="symbol image">
       <figcaption><h4 style="margin-top:0;">iPhone 8</figcaption>
     </figure>
     </a>
-    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_7_Plus">
+    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_7_Plus&email=">
     <figure class="gallery-frame">
       <img class="gallery-img" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg" alt="symbol image">
       <figcaption><h4 style="margin-top:0;">iPhone 7 Plus</figcaption>
     </figure>
     </a>
-    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_7">
+    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_7&email=">
     <figure class="gallery-frame">
       <img class="gallery-img" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg" alt="symbol image">
       <figcaption><h4 style="margin-top:0;">iPhone 7</figcaption>
     </figure>
     </a>
-    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_6S_Plus">
+    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_6S_Plus&email=">
     <figure class="gallery-frame">
       <img class="gallery-img" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg" alt="symbol image">
       <figcaption><h4 style="margin-top:0;">iPhone 6S Plus</figcaption>
     </figure>
     </a>
-    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_6S">
+    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_6S&email=">
     <figure class="gallery-frame">
       <img class="gallery-img" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg" alt="symbol image">
       <figcaption><h4 style="margin-top:0;">iPhone 6S</figcaption>
     </figure>
     </a>
-    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_6_Plus">
+    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_6_Plus&email=">
     <figure class="gallery-frame">
       <img class="gallery-img" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg" alt="symbol image">
       <figcaption><h4 style="margin-top:0;">iPhone 6 Plus</figcaption>
     </figure>
     </a>
-    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_6">
+    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_6&email=">
     <figure class="gallery-frame">
       <img class="gallery-img" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg" alt="symbol image">
       <figcaption><h4 style="margin-top:0;">iPhone 6</figcaption>
     </figure>
     </a>
-    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_SE">
+    <a href="${pageContext.request.contextPath}/configuraremodelS?model=iPhone_SE&email=">
     <figure class="gallery-frame">
       <img class="gallery-img" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg" alt="symbol image">
       <figcaption><h4 style="margin-top:0;">iPhone SE</figcaption>

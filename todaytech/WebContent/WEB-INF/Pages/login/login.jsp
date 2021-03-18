@@ -28,7 +28,6 @@
 		</div>
 		<p style="text-align:center;"><b><input type="checkbox" id="remember" name="remember" value="yes"><label>Tine-ma minte</label><br></b></p>
 		<p style="text-align:center;"><b><a style="text-decoration:none;color:black" href="${pageContext.request.contextPath}/registerS">Creeaza un cont!</a></b></p>
-		<p  style="text-align:center;"><b><a style="text-decoration:none;color:black" href="youtube.com">Ti-ai uitat parola?</a></b></p>
 		<button>Conecteaza-te</button>
 	</form>
 </div>

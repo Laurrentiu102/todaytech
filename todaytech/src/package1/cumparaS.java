@@ -1,8 +1,6 @@
 package package1;
 
 import java.io.IOException;
-import java.sql.SQLException;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class vindeFinalizare
+ * Servlet implementation class cumparaS
  */
-@WebServlet("/vindeFinalizare")
-public class vindeFinalizare extends HttpServlet {
+@WebServlet("/cumparaS")
+public class cumparaS extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public vindeFinalizare() {
+    public cumparaS() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,14 +26,8 @@ public class vindeFinalizare extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		try {
-			request.getRequestDispatcher("/WEB-INF/Pages/vinde/vindeFinalizare.jsp").forward(request, response);
-			SQL sql=new SQL();
-			sql.adaugaTelefon("Apple",request.getParameter("model"),request.getParameter("mem_int"),request.getParameter("pret"),request.getParameter("culoare"),request.getParameter("retea"),request.getParameter("cond").replaceAll("_", " "),sql.idCont(request.getParameter("email")));
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**

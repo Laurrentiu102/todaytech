@@ -30,7 +30,6 @@ public class cumparasivindeS extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println(request.getParameter("paramName1"));
 		try {
 			if(checkRememberme(request,response)!=null) {
 				request.setAttribute("email", checkRememberme(request,response));

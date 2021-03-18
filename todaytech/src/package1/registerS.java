@@ -93,7 +93,6 @@ public class registerS extends HttpServlet {
 		if(!nume.isEmpty())
 			if(Character.isLowerCase(nume.charAt(0)))
 				nume = nume.substring(0,1).toUpperCase()+nume.substring(1);
-			System.out.println(nume);
 			
 		if(numebun==true) {
 			nr++;

@@ -136,6 +136,17 @@ h3{
 
 </style>
 <script>
+	window.onload = function() {
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		const email = urlParams.get('email');
+		var a=""
+		for(var i=0;i<document.getElementsByTagName("form").length;i++){
+			var a=(document.getElementsByTagName("form")[i].action+email).substring((document.getElementsByTagName("form")[i].action+email).indexOf("/todaytech/"));
+			document.getElementsByTagName("form")[i].setAttribute("action", a); 
+		}
+	};
+
 	function setPret()
 	{
 		var s="";
@@ -159,10 +170,13 @@ h3{
 			var x = document.getElementById("container");
 			x.style.display = "block";
 			document.getElementById('pret').innerHTML=("Pret: "+s+" lei");
+			var a="";
+			
+			for(var i=0;i<document.getElementsByTagName("form").length;i++){
+				var a=(document.getElementsByTagName("form")[i].action+"&pret="+s).substring((document.getElementsByTagName("form")[i].action+"&pret="+s).indexOf("/todaytech/"));
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+			}
 		}
-	}
-	
-	function afiseazaFinalizare(){
 	}
 </script>
 </head>
@@ -171,7 +185,7 @@ h3{
 <div class="bara-fundal"><span class="bara" style="width: 60%;"></span></div>
 <h1 style="font-size:50px;text-align:center;margin-top:3%">Configureaza ${model}</h1>
 <div class="configurare">
-<form id="form" class="form" name="form" method="post" action="${pageContext.request.contextPath}/vindeFinalizare">
+<form id="form" class="form" name="form" method="post" action="${pageContext.request.contextPath}/vindeFinalizare?model=${model}&email=${email}">
   <select tabindex="4" name="culoare" onchange="setPret()" class="dropdown" data-settings='{"cutOff": 4}'>
     <option value="Culoare" class="label">Culoare</option>
     <option value="Rosu" class="label">Rosu</option>
@@ -200,7 +214,7 @@ h3{
     <option value="Foarte bun">Foarte bun</option>
     <option value="Bun">Bun</option>
   </select>
-  <label class="pretcss" id="pret">&nbsp</label>
+  <label class="pretcss" name="pret" id="pret">&nbsp</label>
   <img style="margin-left:auto;margin-right:auto;max-width: 30rem;height: 30rem;" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/${poza}" alt="symbol image">
   <br>
   <div id="container" style="margin-top:2%;display:none">

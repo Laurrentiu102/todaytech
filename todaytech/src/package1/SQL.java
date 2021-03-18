@@ -20,6 +20,16 @@ public class SQL {
 			Connection con=DriverManager.getConnection(host,user,password);
 			return con;
 	}
+	public void adaugaTelefon(String brand,String model,String mem_interna,String pret,String culoare,String retea,String conditie,String id_vanzator) throws ClassNotFoundException {
+		try {
+			Connection con = getcon();
+			PreparedStatement st = con.prepareStatement("INSERT INTO TELEFOANE(brand,model,mem_interna,pret,culoare,retea,conditie,id_vanzator) VALUES('"+brand+"','"+model+"','"+mem_interna+"','"+pret+"','"+culoare+"','"+retea+"','"+conditie+"','"+id_vanzator+"')");
+			st.executeUpdate();
+			con.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 	
 	public void deleteCookie(String cookie) throws ClassNotFoundException, SQLException, NoSuchAlgorithmException {
 		Connection con = getcon();
@@ -36,7 +46,6 @@ public class SQL {
 		PreparedStatement st = con.prepareStatement("SELECT COUNT(*) FROM COOKIES WHERE cookie_nr='"+cookie+"'");
 		ResultSet rs = st.executeQuery();
 		rs.next();
-		System.out.println(rs.getInt(1));
 		if(rs.getInt(1)==0)
 			cookiebun=true;
 		con.close();

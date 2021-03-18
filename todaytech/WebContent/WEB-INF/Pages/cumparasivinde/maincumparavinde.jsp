@@ -60,7 +60,7 @@ ${email}<a href="${pageContext.request.contextPath}/logout" class="myButton">Log
 			</a>
     </div>
     <div class="right">
-			<a style="text-decoration:none;color:white" href="${pageContext.request.contextPath}/cumparaS">
+			<a style="text-decoration:none;color:white" href="${pageContext.request.contextPath}/cumparaS?email=${email}">
 				<h1>Cumpara</h1>
 			</a>
     </div>

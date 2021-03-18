@@ -44,10 +44,7 @@ public class Cookies_functions {
 		
 		
 		Hash h = new Hash();
-		System.out.println(cookie_nr);
 		cookie_nr=h.genHash(cookie_nr);
-		System.out.println(cookie_nr);
-		
 		sql.addCokie(cookie_nr,sql.idCont(request.getParameter("email")));
 		
 		response.addCookie(cookievalidator);

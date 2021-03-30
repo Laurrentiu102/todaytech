@@ -14,6 +14,18 @@
   	
 	<title>TodayTech</title>
 </head>
+<script>
+window.onload = function() {
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+	const email = urlParams.get('email');
+	var a=""
+	for(var i=0;i<document.getElementsByTagName("a").length;i++){
+		var a=(document.getElementsByTagName("a")[i].href+email).substring((document.getElementsByTagName("a")[i].href+email).indexOf("/todaytech/"));
+		document.getElementsByTagName("a")[i].setAttribute("href", a); 
+	}
+};
+</script>
 <body>
 	<header class="cd-header">
 		<h1>Cauta telefonul dorit</h1>
@@ -36,278 +48,278 @@
 
 		<section class="cd-gallery">
 			<ul>
-				<li class="mix Apple iPhone_SE_2020 ca_nou 64gb"><div style="background-image: url(${pageContext.request.contextPath}/Resurse/PozeTelefoane/fundal.jpg)"><img src=""></div></li>
-				<li class="mix Apple iPhone_SE_2020 ca_nou 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></li>
-				<li class="mix Apple iPhone_SE_2020 ca_nou 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></li>
-				<li class="mix Apple iPhone_SE_2020 ca_nou 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></li>
-				<li class="mix Apple iPhone_SE_2020 excelent 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></li>
-				<li class="mix Apple iPhone_SE_2020 excelent 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></li>
-				<li class="mix Apple iPhone_SE_2020 excelent 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></li>
-				<li class="mix Apple iPhone_SE_2020 excelent 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></li>
-				<li class="mix Apple iPhone_SE_2020 foarte_bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></li>
-				<li class="mix Apple iPhone_SE_2020 foarte_bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></li>
-				<li class="mix Apple iPhone_SE_2020 foarte_bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></li>
-				<li class="mix Apple iPhone_SE_2020 foarte_bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></li>
-				<li class="mix Apple iPhone_SE_2020 bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></li>
-				<li class="mix Apple iPhone_SE_2020 bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></li>
-				<li class="mix Apple iPhone_SE_2020 bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></li>
-				<li class="mix Apple iPhone_SE_2020 bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></li>
-				<li class="mix Apple iPhone_11 ca_nou 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></li>
-				<li class="mix Apple iPhone_11 ca_nou 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></li>
-				<li class="mix Apple iPhone_11 ca_nou 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></li>
-				<li class="mix Apple iPhone_11 ca_nou 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></li>
-				<li class="mix Apple iPhone_11 excelent 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></li>
-				<li class="mix Apple iPhone_11 excelent 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></li>
-				<li class="mix Apple iPhone_11 excelent 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></li>
-				<li class="mix Apple iPhone_11 excelent 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></li>
-				<li class="mix Apple iPhone_11 foarte_bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></li>
-				<li class="mix Apple iPhone_11 foarte_bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></li>
-				<li class="mix Apple iPhone_11 foarte_bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></li>
-				<li class="mix Apple iPhone_11 foarte_bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></li>
-				<li class="mix Apple iPhone_11 bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></li>
-				<li class="mix Apple iPhone_11 bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></li>
-				<li class="mix Apple iPhone_11 bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></li>
-				<li class="mix Apple iPhone_11 bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro ca_nou 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro ca_nou 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro ca_nou 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro ca_nou 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro excelent 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro excelent 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro excelent 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro excelent 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro foarte_bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro foarte_bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro foarte_bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro foarte_bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro_Max ca_nou 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro_Max ca_nou 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro_Max ca_nou 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro_Max ca_nou 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro_Max excelent 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro_Max excelent 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro_Max excelent 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro_Max excelent 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro_Max foarte_bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro_Max foarte_bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro_Max foarte_bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro_Max foarte_bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro_Max bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro_Max bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro_Max bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></li>
-				<li class="mix Apple iPhone_11_Pro_Max bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></li>
-				<li class="mix Apple iPhone_XS ca_nou 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></li>
-				<li class="mix Apple iPhone_XS ca_nou 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></li>
-				<li class="mix Apple iPhone_XS ca_nou 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></li>
-				<li class="mix Apple iPhone_XS ca_nou 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></li>
-				<li class="mix Apple iPhone_XS excelent 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></li>
-				<li class="mix Apple iPhone_XS excelent 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></li>
-				<li class="mix Apple iPhone_XS excelent 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></li>
-				<li class="mix Apple iPhone_XS excelent 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></li>
-				<li class="mix Apple iPhone_XS foarte_bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></li>
-				<li class="mix Apple iPhone_XS foarte_bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></li>
-				<li class="mix Apple iPhone_XS foarte_bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></li>
-				<li class="mix Apple iPhone_XS foarte_bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></li>
-				<li class="mix Apple iPhone_XS bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></li>
-				<li class="mix Apple iPhone_XS bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></li>
-				<li class="mix Apple iPhone_XS bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></li>
-				<li class="mix Apple iPhone_XS bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></li>
-				<li class="mix Apple iPhone_XS_Max ca_nou 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></li>
-				<li class="mix Apple iPhone_XS_Max ca_nou 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></li>
-				<li class="mix Apple iPhone_XS_Max ca_nou 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></li>
-				<li class="mix Apple iPhone_XS_Max ca_nou 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></li>
-				<li class="mix Apple iPhone_XS_Max excelent 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></li>
-				<li class="mix Apple iPhone_XS_Max excelent 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></li>
-				<li class="mix Apple iPhone_XS_Max excelent 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></li>
-				<li class="mix Apple iPhone_XS_Max excelent 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></li>
-				<li class="mix Apple iPhone_XS_Max foarte_bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></li>
-				<li class="mix Apple iPhone_XS_Max foarte_bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></li>
-				<li class="mix Apple iPhone_XS_Max foarte_bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></li>
-				<li class="mix Apple iPhone_XS_Max foarte_bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></li>
-				<li class="mix Apple iPhone_XS_Max bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></li>
-				<li class="mix Apple iPhone_XS_Max bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></li>
-				<li class="mix Apple iPhone_XS_Max bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></li>
-				<li class="mix Apple iPhone_XS_Max bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></li>
-				<li class="mix Apple iPhone_XR ca_nou 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></li>
-				<li class="mix Apple iPhone_XR ca_nou 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></li>
-				<li class="mix Apple iPhone_XR ca_nou 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></li>
-				<li class="mix Apple iPhone_XR ca_nou 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></li>
-				<li class="mix Apple iPhone_XR excelent 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></li>
-				<li class="mix Apple iPhone_XR excelent 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></li>
-				<li class="mix Apple iPhone_XR excelent 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></li>
-				<li class="mix Apple iPhone_XR excelent 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></li>
-				<li class="mix Apple iPhone_XR foarte_bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></li>
-				<li class="mix Apple iPhone_XR foarte_bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></li>
-				<li class="mix Apple iPhone_XR foarte_bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></li>
-				<li class="mix Apple iPhone_XR foarte_bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></li>
-				<li class="mix Apple iPhone_XR bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></li>
-				<li class="mix Apple iPhone_XR bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></li>
-				<li class="mix Apple iPhone_XR bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></li>
-				<li class="mix Apple iPhone_XR bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></li>
-				<li class="mix Apple iPhone_X ca_nou 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></li>
-				<li class="mix Apple iPhone_X ca_nou 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></li>
-				<li class="mix Apple iPhone_X ca_nou 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></li>
-				<li class="mix Apple iPhone_X ca_nou 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></li>
-				<li class="mix Apple iPhone_X excelent 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></li>
-				<li class="mix Apple iPhone_X excelent 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></li>
-				<li class="mix Apple iPhone_X excelent 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></li>
-				<li class="mix Apple iPhone_X excelent 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></li>
-				<li class="mix Apple iPhone_X foarte_bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></li>
-				<li class="mix Apple iPhone_X foarte_bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></li>
-				<li class="mix Apple iPhone_X foarte_bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></li>
-				<li class="mix Apple iPhone_X foarte_bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></li>
-				<li class="mix Apple iPhone_X bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></li>
-				<li class="mix Apple iPhone_X bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></li>
-				<li class="mix Apple iPhone_X bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></li>
-				<li class="mix Apple iPhone_X bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></li>
-				<li class="mix Apple iPhone_8 ca_nou 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></li>
-				<li class="mix Apple iPhone_8 ca_nou 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></li>
-				<li class="mix Apple iPhone_8 ca_nou 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></li>
-				<li class="mix Apple iPhone_8 ca_nou 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></li>
-				<li class="mix Apple iPhone_8 excelent 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></li>
-				<li class="mix Apple iPhone_8 excelent 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></li>
-				<li class="mix Apple iPhone_8 excelent 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></li>
-				<li class="mix Apple iPhone_8 excelent 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></li>
-				<li class="mix Apple iPhone_8 foarte_bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></li>
-				<li class="mix Apple iPhone_8 foarte_bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></li>
-				<li class="mix Apple iPhone_8 foarte_bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></li>
-				<li class="mix Apple iPhone_8 foarte_bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></li>
-				<li class="mix Apple iPhone_8 bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></li>
-				<li class="mix Apple iPhone_8 bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></li>
-				<li class="mix Apple iPhone_8 bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></li>
-				<li class="mix Apple iPhone_8 bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></li>
-				<li class="mix Apple iPhone_8_Plus ca_nou 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></li>
-				<li class="mix Apple iPhone_8_Plus ca_nou 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></li>
-				<li class="mix Apple iPhone_8_Plus ca_nou 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></li>
-				<li class="mix Apple iPhone_8_Plus ca_nou 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></li>
-				<li class="mix Apple iPhone_8_Plus excelent 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></li>
-				<li class="mix Apple iPhone_8_Plus excelent 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></li>
-				<li class="mix Apple iPhone_8_Plus excelent 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></li>
-				<li class="mix Apple iPhone_8_Plus excelent 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></li>
-				<li class="mix Apple iPhone_8_Plus foarte_bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></li>
-				<li class="mix Apple iPhone_8_Plus foarte_bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></li>
-				<li class="mix Apple iPhone_8_Plus foarte_bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></li>
-				<li class="mix Apple iPhone_8_Plus foarte_bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></li>
-				<li class="mix Apple iPhone_8_Plus bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></li>
-				<li class="mix Apple iPhone_8_Plus bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></li>
-				<li class="mix Apple iPhone_8_Plus bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></li>
-				<li class="mix Apple iPhone_8_Plus bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></li>
-				<li class="mix Apple iPhone_7 ca_nou 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></li>
-				<li class="mix Apple iPhone_7 ca_nou 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></li>
-				<li class="mix Apple iPhone_7 ca_nou 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></li>
-				<li class="mix Apple iPhone_7 ca_nou 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></li>
-				<li class="mix Apple iPhone_7 excelent 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></li>
-				<li class="mix Apple iPhone_7 excelent 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></li>
-				<li class="mix Apple iPhone_7 excelent 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></li>
-				<li class="mix Apple iPhone_7 excelent 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></li>
-				<li class="mix Apple iPhone_7 foarte_bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></li>
-				<li class="mix Apple iPhone_7 foarte_bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></li>
-				<li class="mix Apple iPhone_7 foarte_bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></li>
-				<li class="mix Apple iPhone_7 foarte_bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></li>
-				<li class="mix Apple iPhone_7 bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></li>
-				<li class="mix Apple iPhone_7 bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></li>
-				<li class="mix Apple iPhone_7 bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></li>
-				<li class="mix Apple iPhone_7 bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></li>
-				<li class="mix Apple iPhone_7_Plus ca_nou 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></li>
-				<li class="mix Apple iPhone_7_Plus ca_nou 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></li>
-				<li class="mix Apple iPhone_7_Plus ca_nou 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></li>
-				<li class="mix Apple iPhone_7_Plus ca_nou 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></li>
-				<li class="mix Apple iPhone_7_Plus excelent 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></li>
-				<li class="mix Apple iPhone_7_Plus excelent 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></li>
-				<li class="mix Apple iPhone_7_Plus excelent 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></li>
-				<li class="mix Apple iPhone_7_Plus excelent 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></li>
-				<li class="mix Apple iPhone_7_Plus foarte_bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></li>
-				<li class="mix Apple iPhone_7_Plus foarte_bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></li>
-				<li class="mix Apple iPhone_7_Plus foarte_bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></li>
-				<li class="mix Apple iPhone_7_Plus foarte_bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></li>
-				<li class="mix Apple iPhone_7_Plus bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></li>
-				<li class="mix Apple iPhone_7_Plus bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></li>
-				<li class="mix Apple iPhone_7_Plus bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></li>
-				<li class="mix Apple iPhone_7_Plus bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></li>
-				<li class="mix Apple iPhone_SE ca_nou 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></li>
-				<li class="mix Apple iPhone_SE ca_nou 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></li>
-				<li class="mix Apple iPhone_SE ca_nou 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></li>
-				<li class="mix Apple iPhone_SE ca_nou 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></li>
-				<li class="mix Apple iPhone_SE excelent 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></li>
-				<li class="mix Apple iPhone_SE excelent 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></li>
-				<li class="mix Apple iPhone_SE excelent 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></li>
-				<li class="mix Apple iPhone_SE excelent 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></li>
-				<li class="mix Apple iPhone_SE foarte_bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></li>
-				<li class="mix Apple iPhone_SE foarte_bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></li>
-				<li class="mix Apple iPhone_SE foarte_bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></li>
-				<li class="mix Apple iPhone_SE foarte_bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></li>
-				<li class="mix Apple iPhone_SE bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></li>
-				<li class="mix Apple iPhone_SE bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></li>
-				<li class="mix Apple iPhone_SE bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></li>
-				<li class="mix Apple iPhone_SE bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></li>
-				<li class="mix Apple iPhone_6 ca_nou 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></li>
-				<li class="mix Apple iPhone_6 ca_nou 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></li>
-				<li class="mix Apple iPhone_6 ca_nou 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></li>
-				<li class="mix Apple iPhone_6 ca_nou 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></li>
-				<li class="mix Apple iPhone_6 excelent 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></li>
-				<li class="mix Apple iPhone_6 excelent 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></li>
-				<li class="mix Apple iPhone_6 excelent 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></li>
-				<li class="mix Apple iPhone_6 excelent 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></li>
-				<li class="mix Apple iPhone_6 foarte_bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></li>
-				<li class="mix Apple iPhone_6 foarte_bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></li>
-				<li class="mix Apple iPhone_6 foarte_bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></li>
-				<li class="mix Apple iPhone_6 foarte_bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></li>
-				<li class="mix Apple iPhone_6 bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></li>
-				<li class="mix Apple iPhone_6 bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></li>
-				<li class="mix Apple iPhone_6 bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></li>
-				<li class="mix Apple iPhone_6 bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></li>
-				<li class="mix Apple iPhone_6_Plus ca_nou 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></li>
-				<li class="mix Apple iPhone_6_Plus ca_nou 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></li>
-				<li class="mix Apple iPhone_6_Plus ca_nou 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></li>
-				<li class="mix Apple iPhone_6_Plus ca_nou 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></li>
-				<li class="mix Apple iPhone_6_Plus excelent 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></li>
-				<li class="mix Apple iPhone_6_Plus excelent 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></li>
-				<li class="mix Apple iPhone_6_Plus excelent 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></li>
-				<li class="mix Apple iPhone_6_Plus excelent 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></li>
-				<li class="mix Apple iPhone_6_Plus foarte_bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></li>
-				<li class="mix Apple iPhone_6_Plus foarte_bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></li>
-				<li class="mix Apple iPhone_6_Plus foarte_bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></li>
-				<li class="mix Apple iPhone_6_Plus foarte_bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></li>
-				<li class="mix Apple iPhone_6_Plus bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></li>
-				<li class="mix Apple iPhone_6_Plus bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></li>
-				<li class="mix Apple iPhone_6_Plus bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></li>
-				<li class="mix Apple iPhone_6_Plus bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></li>
-				<li class="mix Apple iPhone_6S ca_nou 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></li>
-				<li class="mix Apple iPhone_6S ca_nou 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></li>
-				<li class="mix Apple iPhone_6S ca_nou 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></li>
-				<li class="mix Apple iPhone_6S ca_nou 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></li>
-				<li class="mix Apple iPhone_6S excelent 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></li>
-				<li class="mix Apple iPhone_6S excelent 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></li>
-				<li class="mix Apple iPhone_6S excelent 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></li>
-				<li class="mix Apple iPhone_6S excelent 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></li>
-				<li class="mix Apple iPhone_6S foarte_bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></li>
-				<li class="mix Apple iPhone_6S foarte_bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></li>
-				<li class="mix Apple iPhone_6S foarte_bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></li>
-				<li class="mix Apple iPhone_6S foarte_bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></li>
-				<li class="mix Apple iPhone_6S bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></li>
-				<li class="mix Apple iPhone_6S bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></li>
-				<li class="mix Apple iPhone_6S bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></li>
-				<li class="mix Apple iPhone_6S bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></li>
-				<li class="mix Apple iPhone_6_S_Plus ca_nou 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></li>
-				<li class="mix Apple iPhone_6_S_Plus ca_nou 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></li>
-				<li class="mix Apple iPhone_6_S_Plus ca_nou 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></li>
-				<li class="mix Apple iPhone_6_S_Plus ca_nou 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></li>
-				<li class="mix Apple iPhone_6_S_Plus excelent 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></li>
-				<li class="mix Apple iPhone_6_S_Plus excelent 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></li>
-				<li class="mix Apple iPhone_6_S_Plus excelent 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></li>
-				<li class="mix Apple iPhone_6_S_Plus excelent 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></li>
-				<li class="mix Apple iPhone_6_S_Plus foarte_bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></li>
-				<li class="mix Apple iPhone_6_S_Plus foarte_bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></li>
-				<li class="mix Apple iPhone_6_S_Plus foarte_bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></li>
-				<li class="mix Apple iPhone_6_S_Plus foarte_bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></li>
-				<li class="mix Apple iPhone_6_S_Plus bun 64gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></li>
-				<li class="mix Apple iPhone_6_S_Plus bun 128gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></li>
-				<li class="mix Apple iPhone_6_S_Plus bun 256gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></li>
-				<li class="mix Apple iPhone_6_S_Plus bun 512gb"><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></li>
+				<li class="mix Apple iPhone_SE_2020 ca_nou 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE_2020&conditie=ca_nou&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></a></li>
+				<li class="mix Apple iPhone_SE_2020 ca_nou 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE_2020&conditie=ca_nou&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></a></li>
+				<li class="mix Apple iPhone_SE_2020 ca_nou 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE_2020&conditie=ca_nou&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></a></li>
+				<li class="mix Apple iPhone_SE_2020 ca_nou 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE_2020&conditie=ca_nou&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></a></li>
+				<li class="mix Apple iPhone_SE_2020 excelent 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE_2020&conditie=excelent&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></a></li>
+				<li class="mix Apple iPhone_SE_2020 excelent 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE_2020&conditie=excelent&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></a></li>
+				<li class="mix Apple iPhone_SE_2020 excelent 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE_2020&conditie=excelent&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></a></li>
+				<li class="mix Apple iPhone_SE_2020 excelent 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE_2020&conditie=excelent&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></a></li>
+				<li class="mix Apple iPhone_SE_2020 foarte_bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE_2020&conditie=foarte_bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></a></li>
+				<li class="mix Apple iPhone_SE_2020 foarte_bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE_2020&conditie=foarte_bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></a></li>
+				<li class="mix Apple iPhone_SE_2020 foarte_bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE_2020&conditie=foarte_bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></a></li>
+				<li class="mix Apple iPhone_SE_2020 foarte_bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE_2020&conditie=foarte_bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></a></li>
+				<li class="mix Apple iPhone_SE_2020 bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE_2020&conditie=bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></a></li>
+				<li class="mix Apple iPhone_SE_2020 bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE_2020&conditie=bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></a></li>
+				<li class="mix Apple iPhone_SE_2020 bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE_2020&conditie=bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></a></li>
+				<li class="mix Apple iPhone_SE_2020 bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE_2020&conditie=bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese2020.jpg"></a></li>
+				<li class="mix Apple iPhone_11 ca_nou 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11&conditie=ca_nou&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></a></li>
+				<li class="mix Apple iPhone_11 ca_nou 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11&conditie=ca_nou&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></a></li>
+				<li class="mix Apple iPhone_11 ca_nou 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11&conditie=ca_nou&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></a></li>
+				<li class="mix Apple iPhone_11 ca_nou 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11&conditie=ca_nou&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></a></li>
+				<li class="mix Apple iPhone_11 excelent 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11&conditie=excelent&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></a></li>
+				<li class="mix Apple iPhone_11 excelent 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11&conditie=excelent&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></a></li>
+				<li class="mix Apple iPhone_11 excelent 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11&conditie=excelent&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></a></li>
+				<li class="mix Apple iPhone_11 excelent 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11&conditie=excelent&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></a></li>
+				<li class="mix Apple iPhone_11 foarte_bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11&conditie=foarte_bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></a></li>
+				<li class="mix Apple iPhone_11 foarte_bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11&conditie=foarte_bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></a></li>
+				<li class="mix Apple iPhone_11 foarte_bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11&conditie=foarte_bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></a></li>
+				<li class="mix Apple iPhone_11 foarte_bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11&conditie=foarte_bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></a></li>
+				<li class="mix Apple iPhone_11 bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11&conditie=bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></a></li>
+				<li class="mix Apple iPhone_11 bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11&conditie=bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></a></li>
+				<li class="mix Apple iPhone_11 bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11&conditie=bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></a></li>
+				<li class="mix Apple iPhone_11 bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11&conditie=bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro ca_nou 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro&conditie=ca_nou&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro ca_nou 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro&conditie=ca_nou&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro ca_nou 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro&conditie=ca_nou&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro ca_nou 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro&conditie=ca_nou&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro excelent 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro&conditie=excelent&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro excelent 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro&conditie=excelent&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro excelent 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro&conditie=excelent&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro excelent 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro&conditie=excelent&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro foarte_bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro&conditie=foarte_bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro foarte_bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro&conditie=foarte_bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro foarte_bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro&conditie=foarte_bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro foarte_bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro&conditie=foarte_bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro&conditie=bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro&conditie=bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro&conditie=bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro&conditie=bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11pro.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro_Max ca_nou 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro_Max&conditie=ca_nou&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro_Max ca_nou 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro_Max&conditie=ca_nou&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro_Max ca_nou 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro_Max&conditie=ca_nou&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro_Max ca_nou 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro_Max&conditie=ca_nou&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro_Max excelent 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro_Max&conditie=excelent&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro_Max excelent 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro_Max&conditie=excelent&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro_Max excelent 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro_Max&conditie=excelent&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro_Max excelent 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro_Max&conditie=excelent&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro_Max foarte_bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro_Max&conditie=foarte_bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro_Max foarte_bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro_Max&conditie=foarte_bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro_Max foarte_bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro_Max&conditie=foarte_bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro_Max foarte_bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro_Max&conditie=foarte_bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro_Max bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro_Max&conditie=bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro_Max bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro_Max&conditie=bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro_Max bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro_Max&conditie=bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></a></li>
+				<li class="mix Apple iPhone_11_Pro_Max bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_11_Pro_Max&conditie=bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone11promax.jpg"></a></li>
+				<li class="mix Apple iPhone_XS ca_nou 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS&conditie=ca_nou&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></a></li>
+				<li class="mix Apple iPhone_XS ca_nou 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS&conditie=ca_nou&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></a></li>
+				<li class="mix Apple iPhone_XS ca_nou 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS&conditie=ca_nou&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></a></li>
+				<li class="mix Apple iPhone_XS ca_nou 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS&conditie=ca_nou&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></a></li>
+				<li class="mix Apple iPhone_XS excelent 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS&conditie=excelent&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></a></li>
+				<li class="mix Apple iPhone_XS excelent 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS&conditie=excelent&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></a></li>
+				<li class="mix Apple iPhone_XS excelent 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS&conditie=excelent&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></a></li>
+				<li class="mix Apple iPhone_XS excelent 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS&conditie=excelent&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></a></li>
+				<li class="mix Apple iPhone_XS foarte_bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS&conditie=foarte_bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></a></li>
+				<li class="mix Apple iPhone_XS foarte_bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS&conditie=foarte_bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></a></li>
+				<li class="mix Apple iPhone_XS foarte_bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS&conditie=foarte_bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></a></li>
+				<li class="mix Apple iPhone_XS foarte_bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS&conditie=foarte_bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></a></li>
+				<li class="mix Apple iPhone_XS bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS&conditie=bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></a></li>
+				<li class="mix Apple iPhone_XS bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS&conditie=bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></a></li>
+				<li class="mix Apple iPhone_XS bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS&conditie=bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></a></li>
+				<li class="mix Apple iPhone_XS bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS&conditie=bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexs.jpg"></a></li>
+				<li class="mix Apple iPhone_XS_Max ca_nou 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS_Max&conditie=ca_nou&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></a></li>
+				<li class="mix Apple iPhone_XS_Max ca_nou 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS_Max&conditie=ca_nou&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></a></li>
+				<li class="mix Apple iPhone_XS_Max ca_nou 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS_Max&conditie=ca_nou&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></a></li>
+				<li class="mix Apple iPhone_XS_Max ca_nou 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS_Max&conditie=ca_nou&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></a></li>
+				<li class="mix Apple iPhone_XS_Max excelent 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS_Max&conditie=excelent&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></a></li>
+				<li class="mix Apple iPhone_XS_Max excelent 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS_Max&conditie=excelent&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></a></li>
+				<li class="mix Apple iPhone_XS_Max excelent 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS_Max&conditie=excelent&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></a></li>
+				<li class="mix Apple iPhone_XS_Max excelent 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS_Max&conditie=excelent&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></a></li>
+				<li class="mix Apple iPhone_XS_Max foarte_bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS_Max&conditie=foarte_bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></a></li>
+				<li class="mix Apple iPhone_XS_Max foarte_bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS_Max&conditie=foarte_bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></a></li>
+				<li class="mix Apple iPhone_XS_Max foarte_bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS_Max&conditie=foarte_bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></a></li>
+				<li class="mix Apple iPhone_XS_Max foarte_bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS_Max&conditie=foarte_bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></a></li>
+				<li class="mix Apple iPhone_XS_Max bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS_Max&conditie=bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></a></li>
+				<li class="mix Apple iPhone_XS_Max bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS_Max&conditie=bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></a></li>
+				<li class="mix Apple iPhone_XS_Max bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS_Max&conditie=bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></a></li>
+				<li class="mix Apple iPhone_XS_Max bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XS_Max&conditie=bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexsmax.jpg"></a></li>
+				<li class="mix Apple iPhone_XR ca_nou 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XR&conditie=ca_nou&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></a></li>
+				<li class="mix Apple iPhone_XR ca_nou 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XR&conditie=ca_nou&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></a></li>
+				<li class="mix Apple iPhone_XR ca_nou 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XR&conditie=ca_nou&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></a></li>
+				<li class="mix Apple iPhone_XR ca_nou 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XR&conditie=ca_nou&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></a></li>
+				<li class="mix Apple iPhone_XR excelent 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XR&conditie=excelent&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></a></li>
+				<li class="mix Apple iPhone_XR excelent 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XR&conditie=excelent&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></a></li>
+				<li class="mix Apple iPhone_XR excelent 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XR&conditie=excelent&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></a></li>
+				<li class="mix Apple iPhone_XR excelent 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XR&conditie=excelent&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></a></li>
+				<li class="mix Apple iPhone_XR foarte_bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XR&conditie=foarte_bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></a></li>
+				<li class="mix Apple iPhone_XR foarte_bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XR&conditie=foarte_bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></a></li>
+				<li class="mix Apple iPhone_XR foarte_bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XR&conditie=foarte_bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></a></li>
+				<li class="mix Apple iPhone_XR foarte_bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XR&conditie=foarte_bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></a></li>
+				<li class="mix Apple iPhone_XR bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XR&conditie=bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></a></li>
+				<li class="mix Apple iPhone_XR bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XR&conditie=bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></a></li>
+				<li class="mix Apple iPhone_XR bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XR&conditie=bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></a></li>
+				<li class="mix Apple iPhone_XR bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_XR&conditie=bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonexr.jpg"></a></li>
+				<li class="mix Apple iPhone_X ca_nou 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_X&conditie=ca_nou&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></a></li>
+				<li class="mix Apple iPhone_X ca_nou 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_X&conditie=ca_nou&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></a></li>
+				<li class="mix Apple iPhone_X ca_nou 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_X&conditie=ca_nou&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></a></li>
+				<li class="mix Apple iPhone_X ca_nou 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_X&conditie=ca_nou&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></a></li>
+				<li class="mix Apple iPhone_X excelent 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_X&conditie=excelent&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></a></li>
+				<li class="mix Apple iPhone_X excelent 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_X&conditie=excelent&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></a></li>
+				<li class="mix Apple iPhone_X excelent 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_X&conditie=excelent&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></a></li>
+				<li class="mix Apple iPhone_X excelent 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_X&conditie=excelent&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></a></li>
+				<li class="mix Apple iPhone_X foarte_bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_X&conditie=foarte_bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></a></li>
+				<li class="mix Apple iPhone_X foarte_bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_X&conditie=foarte_bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></a></li>
+				<li class="mix Apple iPhone_X foarte_bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_X&conditie=foarte_bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></a></li>
+				<li class="mix Apple iPhone_X foarte_bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_X&conditie=foarte_bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></a></li>
+				<li class="mix Apple iPhone_X bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_X&conditie=bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></a></li>
+				<li class="mix Apple iPhone_X bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_X&conditie=bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></a></li>
+				<li class="mix Apple iPhone_X bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_X&conditie=bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></a></li>
+				<li class="mix Apple iPhone_X bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_X&conditie=bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonex.jpg"></a></li>
+				<li class="mix Apple iPhone_8 ca_nou 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8&conditie=ca_nou&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></a></li>
+				<li class="mix Apple iPhone_8 ca_nou 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8&conditie=ca_nou&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></a></li>
+				<li class="mix Apple iPhone_8 ca_nou 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8&conditie=ca_nou&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></a></li>
+				<li class="mix Apple iPhone_8 ca_nou 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8&conditie=ca_nou&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></a></li>
+				<li class="mix Apple iPhone_8 excelent 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8&conditie=excelent&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></a></li>
+				<li class="mix Apple iPhone_8 excelent 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8&conditie=excelent&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></a></li>
+				<li class="mix Apple iPhone_8 excelent 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8&conditie=excelent&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></a></li>
+				<li class="mix Apple iPhone_8 excelent 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8&conditie=excelent&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></a></li>
+				<li class="mix Apple iPhone_8 foarte_bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8&conditie=foarte_bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></a></li>
+				<li class="mix Apple iPhone_8 foarte_bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8&conditie=foarte_bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></a></li>
+				<li class="mix Apple iPhone_8 foarte_bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8&conditie=foarte_bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></a></li>
+				<li class="mix Apple iPhone_8 foarte_bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8&conditie=foarte_bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></a></li>
+				<li class="mix Apple iPhone_8 bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8&conditie=bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></a></li>
+				<li class="mix Apple iPhone_8 bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8&conditie=bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></a></li>
+				<li class="mix Apple iPhone_8 bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8&conditie=bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></a></li>
+				<li class="mix Apple iPhone_8 bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8&conditie=bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8.jpg"></a></li>
+				<li class="mix Apple iPhone_8_Plus ca_nou 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8_Plus&conditie=ca_nou&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></a></li>
+				<li class="mix Apple iPhone_8_Plus ca_nou 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8_Plus&conditie=ca_nou&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></a></li>
+				<li class="mix Apple iPhone_8_Plus ca_nou 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8_Plus&conditie=ca_nou&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></a></li>
+				<li class="mix Apple iPhone_8_Plus ca_nou 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8_Plus&conditie=ca_nou&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></a></li>
+				<li class="mix Apple iPhone_8_Plus excelent 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8_Plus&conditie=excelent&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></a></li>
+				<li class="mix Apple iPhone_8_Plus excelent 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8_Plus&conditie=excelent&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></a></li>
+				<li class="mix Apple iPhone_8_Plus excelent 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8_Plus&conditie=excelent&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></a></li>
+				<li class="mix Apple iPhone_8_Plus excelent 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8_Plus&conditie=excelent&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></a></li>
+				<li class="mix Apple iPhone_8_Plus foarte_bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8_Plus&conditie=foarte_bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></a></li>
+				<li class="mix Apple iPhone_8_Plus foarte_bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8_Plus&conditie=foarte_bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></a></li>
+				<li class="mix Apple iPhone_8_Plus foarte_bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8_Plus&conditie=foarte_bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></a></li>
+				<li class="mix Apple iPhone_8_Plus foarte_bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8_Plus&conditie=foarte_bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></a></li>
+				<li class="mix Apple iPhone_8_Plus bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8_Plus&conditie=bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></a></li>
+				<li class="mix Apple iPhone_8_Plus bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8_Plus&conditie=bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></a></li>
+				<li class="mix Apple iPhone_8_Plus bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8_Plus&conditie=bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></a></li>
+				<li class="mix Apple iPhone_8_Plus bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_8_Plus&conditie=bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone8plus.jpg"></a></li>
+				<li class="mix Apple iPhone_7 ca_nou 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7&conditie=ca_nou&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></a></li>
+				<li class="mix Apple iPhone_7 ca_nou 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7&conditie=ca_nou&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></a></li>
+				<li class="mix Apple iPhone_7 ca_nou 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7&conditie=ca_nou&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></a></li>
+				<li class="mix Apple iPhone_7 ca_nou 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7&conditie=ca_nou&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></a></li>
+				<li class="mix Apple iPhone_7 excelent 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7&conditie=excelent&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></a></li>
+				<li class="mix Apple iPhone_7 excelent 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7&conditie=excelent&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></a></li>
+				<li class="mix Apple iPhone_7 excelent 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7&conditie=excelent&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></a></li>
+				<li class="mix Apple iPhone_7 excelent 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7&conditie=excelent&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></a></li>
+				<li class="mix Apple iPhone_7 foarte_bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7&conditie=foarte_bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></a></li>
+				<li class="mix Apple iPhone_7 foarte_bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7&conditie=foarte_bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></a></li>
+				<li class="mix Apple iPhone_7 foarte_bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7&conditie=foarte_bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></a></li>
+				<li class="mix Apple iPhone_7 foarte_bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7&conditie=foarte_bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></a></li>
+				<li class="mix Apple iPhone_7 bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7&conditie=bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></a></li>
+				<li class="mix Apple iPhone_7 bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7&conditie=bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></a></li>
+				<li class="mix Apple iPhone_7 bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7&conditie=bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></a></li>
+				<li class="mix Apple iPhone_7 bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7&conditie=bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7.jpg"></a></li>
+				<li class="mix Apple iPhone_7_Plus ca_nou 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7_Plus&conditie=ca_nou&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></a></li>
+				<li class="mix Apple iPhone_7_Plus ca_nou 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7_Plus&conditie=ca_nou&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></a></li>
+				<li class="mix Apple iPhone_7_Plus ca_nou 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7_Plus&conditie=ca_nou&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></a></li>
+				<li class="mix Apple iPhone_7_Plus ca_nou 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7_Plus&conditie=ca_nou&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></a></li>
+				<li class="mix Apple iPhone_7_Plus excelent 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7_Plus&conditie=excelent&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></a></li>
+				<li class="mix Apple iPhone_7_Plus excelent 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7_Plus&conditie=excelent&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></a></li>
+				<li class="mix Apple iPhone_7_Plus excelent 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7_Plus&conditie=excelent&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></a></li>
+				<li class="mix Apple iPhone_7_Plus excelent 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7_Plus&conditie=excelent&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></a></li>
+				<li class="mix Apple iPhone_7_Plus foarte_bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7_Plus&conditie=foarte_bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></a></li>
+				<li class="mix Apple iPhone_7_Plus foarte_bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7_Plus&conditie=foarte_bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></a></li>
+				<li class="mix Apple iPhone_7_Plus foarte_bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7_Plus&conditie=foarte_bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></a></li>
+				<li class="mix Apple iPhone_7_Plus foarte_bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7_Plus&conditie=foarte_bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></a></li>
+				<li class="mix Apple iPhone_7_Plus bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7_Plus&conditie=bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></a></li>
+				<li class="mix Apple iPhone_7_Plus bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7_Plus&conditie=bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></a></li>
+				<li class="mix Apple iPhone_7_Plus bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7_Plus&conditie=bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></a></li>
+				<li class="mix Apple iPhone_7_Plus bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_7_Plus&conditie=bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone7plus.jpg"></a></li>
+				<li class="mix Apple iPhone_SE ca_nou 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE&conditie=ca_nou&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></a></li>
+				<li class="mix Apple iPhone_SE ca_nou 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE&conditie=ca_nou&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></a></li>
+				<li class="mix Apple iPhone_SE ca_nou 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE&conditie=ca_nou&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></a></li>
+				<li class="mix Apple iPhone_SE ca_nou 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE&conditie=ca_nou&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></a></li>
+				<li class="mix Apple iPhone_SE excelent 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE&conditie=excelent&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></a></li>
+				<li class="mix Apple iPhone_SE excelent 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE&conditie=excelent&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></a></li>
+				<li class="mix Apple iPhone_SE excelent 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE&conditie=excelent&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></a></li>
+				<li class="mix Apple iPhone_SE excelent 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE&conditie=excelent&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></a></li>
+				<li class="mix Apple iPhone_SE foarte_bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE&conditie=foarte_bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></a></li>
+				<li class="mix Apple iPhone_SE foarte_bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE&conditie=foarte_bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></a></li>
+				<li class="mix Apple iPhone_SE foarte_bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE&conditie=foarte_bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></a></li>
+				<li class="mix Apple iPhone_SE foarte_bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE&conditie=foarte_bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></a></li>
+				<li class="mix Apple iPhone_SE bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE&conditie=bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></a></li>
+				<li class="mix Apple iPhone_SE bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE&conditie=bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></a></li>
+				<li class="mix Apple iPhone_SE bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE&conditie=bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></a></li>
+				<li class="mix Apple iPhone_SE bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_SE&conditie=bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphonese.jpg"></a></li>
+				<li class="mix Apple iPhone_6 ca_nou 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6&conditie=ca_nou&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></a></li>
+				<li class="mix Apple iPhone_6 ca_nou 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6&conditie=ca_nou&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></a></li>
+				<li class="mix Apple iPhone_6 ca_nou 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6&conditie=ca_nou&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></a></li>
+				<li class="mix Apple iPhone_6 ca_nou 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6&conditie=ca_nou&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></a></li>
+				<li class="mix Apple iPhone_6 excelent 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6&conditie=excelent&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></a></li>
+				<li class="mix Apple iPhone_6 excelent 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6&conditie=excelent&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></a></li>
+				<li class="mix Apple iPhone_6 excelent 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6&conditie=excelent&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></a></li>
+				<li class="mix Apple iPhone_6 excelent 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6&conditie=excelent&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></a></li>
+				<li class="mix Apple iPhone_6 foarte_bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6&conditie=foarte_bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></a></li>
+				<li class="mix Apple iPhone_6 foarte_bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6&conditie=foarte_bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></a></li>
+				<li class="mix Apple iPhone_6 foarte_bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6&conditie=foarte_bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></a></li>
+				<li class="mix Apple iPhone_6 foarte_bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6&conditie=foarte_bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></a></li>
+				<li class="mix Apple iPhone_6 bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6&conditie=bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></a></li>
+				<li class="mix Apple iPhone_6 bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6&conditie=bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></a></li>
+				<li class="mix Apple iPhone_6 bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6&conditie=bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></a></li>
+				<li class="mix Apple iPhone_6 bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6&conditie=bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6.jpg"></a></li>
+				<li class="mix Apple iPhone_6_Plus ca_nou 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_Plus&conditie=ca_nou&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_Plus ca_nou 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_Plus&conditie=ca_nou&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_Plus ca_nou 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_Plus&conditie=ca_nou&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_Plus ca_nou 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_Plus&conditie=ca_nou&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_Plus excelent 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_Plus&conditie=excelent&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_Plus excelent 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_Plus&conditie=excelent&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_Plus excelent 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_Plus&conditie=excelent&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_Plus excelent 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_Plus&conditie=excelent&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_Plus foarte_bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_Plus&conditie=foarte_bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_Plus foarte_bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_Plus&conditie=foarte_bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_Plus foarte_bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_Plus&conditie=foarte_bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_Plus foarte_bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_Plus&conditie=foarte_bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_Plus bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_Plus&conditie=bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_Plus bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_Plus&conditie=bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_Plus bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_Plus&conditie=bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_Plus bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_Plus&conditie=bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6plus.jpg"></a></li>
+				<li class="mix Apple iPhone_6S ca_nou 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6S&conditie=ca_nou&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></a></li>
+				<li class="mix Apple iPhone_6S ca_nou 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6S&conditie=ca_nou&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></a></li>
+				<li class="mix Apple iPhone_6S ca_nou 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6S&conditie=ca_nou&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></a></li>
+				<li class="mix Apple iPhone_6S ca_nou 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6S&conditie=ca_nou&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></a></li>
+				<li class="mix Apple iPhone_6S excelent 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6S&conditie=excelent&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></a></li>
+				<li class="mix Apple iPhone_6S excelent 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6S&conditie=excelent&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></a></li>
+				<li class="mix Apple iPhone_6S excelent 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6S&conditie=excelent&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></a></li>
+				<li class="mix Apple iPhone_6S excelent 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6S&conditie=excelent&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></a></li>
+				<li class="mix Apple iPhone_6S foarte_bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6S&conditie=foarte_bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></a></li>
+				<li class="mix Apple iPhone_6S foarte_bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6S&conditie=foarte_bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></a></li>
+				<li class="mix Apple iPhone_6S foarte_bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6S&conditie=foarte_bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></a></li>
+				<li class="mix Apple iPhone_6S foarte_bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6S&conditie=foarte_bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></a></li>
+				<li class="mix Apple iPhone_6S bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6S&conditie=bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></a></li>
+				<li class="mix Apple iPhone_6S bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6S&conditie=bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></a></li>
+				<li class="mix Apple iPhone_6S bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6S&conditie=bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></a></li>
+				<li class="mix Apple iPhone_6S bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6S&conditie=bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6s.jpg"></a></li>
+				<li class="mix Apple iPhone_6_S_Plus ca_nou 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_S_Plus&conditie=ca_nou&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_S_Plus ca_nou 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_S_Plus&conditie=ca_nou&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_S_Plus ca_nou 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_S_Plus&conditie=ca_nou&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_S_Plus ca_nou 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_S_Plus&conditie=ca_nou&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_S_Plus excelent 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_S_Plus&conditie=excelent&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_S_Plus excelent 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_S_Plus&conditie=excelent&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_S_Plus excelent 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_S_Plus&conditie=excelent&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_S_Plus excelent 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_S_Plus&conditie=excelent&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_S_Plus foarte_bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_S_Plus&conditie=foarte_bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_S_Plus foarte_bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_S_Plus&conditie=foarte_bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_S_Plus foarte_bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_S_Plus&conditie=foarte_bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_S_Plus foarte_bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_S_Plus&conditie=foarte_bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_S_Plus bun 64gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_S_Plus&conditie=bun&memint=64gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_S_Plus bun 128gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_S_Plus&conditie=bun&memint=128gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_S_Plus bun 256gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_S_Plus&conditie=bun&memint=256gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></a></li>
+				<li class="mix Apple iPhone_6_S_Plus bun 512gb"><a href=${pageContext.request.contextPath}/cumparaafisaretelS?model=iPhone_6_S_Plus&conditie=bun&memint=512gb&email=><img src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/iphone6splus.jpg"></a></li>
 
 			</ul>
 			<div class="cd-fail-message">No results found</div>

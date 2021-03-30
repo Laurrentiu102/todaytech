@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -137,34 +138,39 @@ h3{
 </style>
 <script>
 	window.onload = function() {
+		document.getElementsByTagName("option")[3].setAttribute("selected","");
+		setPret();
 		const queryString = window.location.search;
 		const urlParams = new URLSearchParams(queryString);
 		const email = urlParams.get('email');
-		var a=""
+		const cond = urlParams.get('conditie');
+		const memint = urlParams.get('memint');
 		for(var i=0;i<document.getElementsByTagName("form").length;i++){
 			var a=(document.getElementsByTagName("form")[i].action+email).substring((document.getElementsByTagName("form")[i].action+email).indexOf("/todaytech/"));
 			document.getElementsByTagName("form")[i].setAttribute("action", a); 
 		}
+		
+
+		
+		var a="selected";
+		document.getElementsByTagName("option")[3].setAttribute("selected","");
+		document.getElementById('pret').innerHTML=("Pret: "+a+" lei");
 	};
 
 	function setPret()
 	{
-		const queryString = window.location.search;
-		const urlParams = new URLSearchParams(queryString);
-		const cond = urlParams.get('conditie');
 		var s="";
-		
-		if(cond.localeCompare("ca_nou")==0)
+		if(form.cond[form.cond.selectedIndex].text.localeCompare("Ca nou")==0)
 			s="2500";
-		else if(cond.localeCompare("excelent")==0)
+		else if(form.cond[form.cond.selectedIndex].text.localeCompare("Excelent")==0)
 			s="2200";
-		else if(cond.localeCompare("foarte_bun")==0)
+		else if(form.cond[form.cond.selectedIndex].text.localeCompare("Foarte bun")==0)
 			s="1900";
 		else
 			s="1600";
 		
 		var m=1;
-		if(form.retea[form.retea.selectedIndex].text=="Retea" || form.culoare[form.culoare.selectedIndex].text=="Culoare")
+		if(form.cond[form.cond.selectedIndex].text=="Conditia telefonului" || form.mem_int[form.mem_int.selectedIndex].text=="Memorie interna" || form.retea[form.retea.selectedIndex].text=="Retea" || form.culoare[form.culoare.selectedIndex].text=="Culoare")
 			m=0;
 		
 		if(m==0){
@@ -181,32 +187,55 @@ h3{
 				document.getElementsByTagName("form")[i].setAttribute("action", a); 
 			}
 		}
-	}
+	};
 </script>
 </head>
 <body>
-<div class="divsus"></div>
+<div class="divsus">
+</div>
 <div class="bara-fundal"><span class="bara" style="width: 60%;"></span></div>
 <h1 style="font-size:50px;text-align:center;margin-top:3%">Configureaza ${model}</h1>
 <div class="configurare">
 <form id="form" class="form" name="form" method="post" action="${pageContext.request.contextPath}/cumparaFinalizare?model=${model}&email=${email}">
-  <select tabindex="4" name="culoare" onchange="setPret()" class="dropdown" data-settings='{"cutOff": 4}'>
+  <select tabindex="4" name="culoare" id="culoare" onchange="setPret()" class="dropdown" data-settings='{"cutOff": 4}'>
     <option value="Culoare" class="label">Culoare</option>
     <option value="Rosu" class="label">Rosu</option>
-    <option value="Alb">Alb</option>
-    <option value="Negru">Negru</option>
-    <option value="Gri">Gri</option>
+    <option value="Alb" >Alb</option>
+    <option value="Negru" >Negru</option>
+    <option value="Gri" >Gri</option>
   </select>
-  <select tabindex="4" onchange="setPret()" name="retea" class="dropdown" data-settings='{"cutOff": 4}'>
+  <select tabindex="4" name="mem_int" id="mem_int" onchange="setPret()" class="dropdown" data-settings='{"cutOff": 4}'>
+    <option value="Memorie interna" class="label">Memorie interna</option>
+    <option value="64GB" class="label"
+    <%
+    if (request.getParameter("memint").equals("64GB")) {
+        out.println("selected");
+    } else {
+        out.println("asd");
+    }
+%> >64GB</option>
+    <option value="128GB">128GB</option>
+    <option value="256GB" >256GB</option>
+    <option value="512GB" >512GB</option>
+  </select>
+  <select tabindex="4" onchange="setPret()" id="retea" name="retea" class="dropdown" data-settings='{"cutOff": 4}'>
     <option value="Reteaua" class="label">Retea</option>
-    <option value="Deblocat" class="label">Deblocat</option>
-    <option value="Orange">Orange</option>
-    <option value="Vodafone">Vodafone</option>
-    <option value="Digi">Digi</option>
+    <option value="Deblocat" class="label" >Deblocat</option>
+    <option value="Orange">>Orange</option>
+    <option value="Vodafone" >Vodafone</option>
+    <option value="Digi" >Digi</option>
+  </select>
+  <select tabindex="4" name="cond" onchange="setPret()" id="cond" class="dropdown" data-settings='{"cutOff": 4}'>
+    <option value="Conditia telefonului" class="label">Conditia telefonului</option>
+    <option value="Ca_nou" >Ca nou</option>
+    <option value="Excelent" >Excelent</option>
+    <option value="Foarte_bun" >Foarte bun</option>
+    <option value="Bun" >Bun</option>
   </select>
   <label class="pretcss" name="pret" id="pret">&nbsp</label>
   <img style="margin-left:auto;margin-right:auto;max-width: 30rem;height: 30rem;" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/${poza}" alt="symbol image">
   <br>
+  <label class="pretcss" name="pret" id="pret">&nbsp</label>
   <div id="container" style="margin-top:2%;display:none">
   <button class="learn-more">
     <span class="circle" aria-hidden="true">
@@ -216,6 +245,7 @@ h3{
   </button>
 </div>
 </form>
+<button onclick="setForm()">Try it</button>
 </div>
 </body>
 </html>

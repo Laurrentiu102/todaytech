@@ -211,7 +211,7 @@ h3{
     <option value="Conditia telefonului" class="label">Conditia telefonului</option>
     <option value="Ca_nou">Ca nou</option>
     <option value="Excelent">Excelent</option>
-    <option value="Foarte bun">Foarte bun</option>
+    <option value="Foarte_bun">Foarte bun</option>
     <option value="Bun">Bun</option>
   </select>
   <label class="pretcss" name="pret" id="pret">&nbsp</label>

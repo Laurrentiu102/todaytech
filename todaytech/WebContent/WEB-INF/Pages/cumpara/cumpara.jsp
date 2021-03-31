@@ -452,22 +452,22 @@ window.onload = function() {
 
 					<ul class="cd-filter-content cd-filters list" style="display: none;">
 						<li>
-							<input class="filter" data-filter=".ca_nou" type="checkbox" id="checkbox24">
+							<input class="filter" data-filter=".Ca_nou" type="checkbox" id="checkbox24">
 			    			<label class="checkbox-label" for="checkbox24">Ca nou</label>
 						</li>
 
 						<li>
-							<input class="filter" data-filter=".excelent" type="checkbox" id="checkbox25">
+							<input class="filter" data-filter=".Excelent" type="checkbox" id="checkbox25">
 							<label class="checkbox-label" for="checkbox25">Excelent</label>
 						</li>
 
 						<li>
-							<input class="filter" data-filter=".foarte_bun" type="checkbox" id="checkbox26">
+							<input class="filter" data-filter=".Foarte_bun" type="checkbox" id="checkbox26">
 							<label class="checkbox-label" for="checkbox26">Foarte bun</label>
 						</li>
 						
 						<li>
-							<input class="filter" data-filter=".bun" type="checkbox" id="checkbox27">
+							<input class="filter" data-filter=".Bun" type="checkbox" id="checkbox27">
 							<label class="checkbox-label" for="checkbox27">Bun</label>
 						</li>
 					</ul>
@@ -478,22 +478,22 @@ window.onload = function() {
 
 					<ul class="cd-filter-content cd-filters list" style="display: none;">
 						<li>
-							<input class="filter" data-filter=".64gb" type="checkbox" id="checkbox28">
+							<input class="filter" data-filter=".64GB" type="checkbox" id="checkbox28">
 			    			<label class="checkbox-label" for="checkbox28">64GB</label>
 						</li>
 
 						<li>
-							<input class="filter" data-filter=".128gb" type="checkbox" id="checkbox29">
+							<input class="filter" data-filter=".128GB" type="checkbox" id="checkbox29">
 							<label class="checkbox-label" for="checkbox29">128GB</label>
 						</li>
 
 						<li>
-							<input class="filter" data-filter=".256gb" type="checkbox" id="checkbox30">
+							<input class="filter" data-filter=".256GB" type="checkbox" id="checkbox30">
 							<label class="checkbox-label" for="checkbox30">256GB</label>
 						</li>
 						
 						<li>
-							<input class="filter" data-filter=".512gb" type="checkbox" id="checkbox31">
+							<input class="filter" data-filter=".512GB" type="checkbox" id="checkbox31">
 							<label class="checkbox-label" for="checkbox31">512GB</label>
 						</li>
 					</ul>

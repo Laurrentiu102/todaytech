@@ -96,6 +96,19 @@ public class SQL {
 		return email;
 	}
 	
+	public boolean existaTelefon() throws ClassNotFoundException, SQLException {
+		Connection con = getcon();
+	    boolean exista=false;
+	    String asd="iPhone SE 2020";
+		PreparedStatement st = con.prepareStatement("SELECT COUNT(*) FROM TELEFOANE WHERE TRIM(model)='"+asd+"'");
+		ResultSet rs = st.executeQuery();
+		rs.next();
+		if(rs.getInt(1)!=0)
+			exista=true;
+		con.close();
+		return exista;
+	}
+	
 	public boolean checkUserExists(String email) throws ClassNotFoundException, SQLException {
 		boolean exista=false;
 		Connection con = getcon();

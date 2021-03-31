@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="java.sql.*"%>
 
 <!DOCTYPE html>
 <html>
@@ -149,14 +150,33 @@ h3{
 			var a=(document.getElementsByTagName("form")[i].action+email).substring((document.getElementsByTagName("form")[i].action+email).indexOf("/todaytech/"));
 			document.getElementsByTagName("form")[i].setAttribute("action", a); 
 		}
-		
-
-		
-		var a="selected";
-		document.getElementsByTagName("option")[3].setAttribute("selected","");
-		document.getElementById('pret').innerHTML=("Pret: "+a+" lei");
 	};
-
+	
+	function existaTelefon(){
+		document.getElementById('stock').innerHTML=("Pret: "+
+		<%
+		try {
+		    java.sql.Connection con;
+		    Class.forName("com.mysql.cj.jdbc.Driver");
+		    con = DriverManager.getConnection("jdbc:mysql://46.214.23.220:3430/TodayTech", "todaytech", "a072263819");
+		    boolean exista=false;
+		    String cond = request.getParameter("conditie").replaceAll("_"," ");;
+		    String model=request.getParameter("model").replaceAll("_"," ");
+		    String memint=request.getParameter("memint");
+			PreparedStatement st = con.prepareStatement("SELECT COUNT(*) FROM TELEFOANE WHERE TRIM(model)='"+model+"' and TRIM(conditie)='"+cond+"' and TRIM(mem_interna)='"+memint+"'");
+			ResultSet rs = st.executeQuery();
+			rs.next();
+			if(rs.getInt(1)!=0)
+				exista=true;
+			con.close();
+			out.println(exista);
+		  }
+		  catch(SQLException e) {
+		    out.println("SQLException caught: " +e.getMessage());
+		  }
+		%>);
+	};
+	
 	function setPret()
 	{
 		var s="";
@@ -177,6 +197,7 @@ h3{
 			var x = document.getElementById("container");
 			x.style.display = "none";
 		}else{
+			existaTelefon();
 			var x = document.getElementById("container");
 			x.style.display = "block";
 			document.getElementById('pret').innerHTML=("Pret: "+s+" lei");
@@ -191,12 +212,18 @@ h3{
 </script>
 </head>
 <body>
+<%!
+public String culoare = "";
+public String model = "";
+public String retea = "";
+public String conditie = "";
+%>
 <div class="divsus">
 </div>
 <div class="bara-fundal"><span class="bara" style="width: 60%;"></span></div>
 <h1 style="font-size:50px;text-align:center;margin-top:3%">Configureaza ${model}</h1>
 <div class="configurare">
-<form id="form" class="form" name="form" method="post" action="${pageContext.request.contextPath}/cumparaFinalizare?model=${model}&email=${email}">
+<form id="form" class="form" name="form" method="post" type="submit" value="Submit" action="${pageContext.request.contextPath}/cumparaFinalizare?model=${model}&email=${email}">
   <select tabindex="4" name="culoare" id="culoare" onchange="setPret()" class="dropdown" data-settings='{"cutOff": 4}'>
     <option value="Culoare" class="label">Culoare</option>
     <option value="Rosu" class="label">Rosu</option>
@@ -206,36 +233,29 @@ h3{
   </select>
   <select tabindex="4" name="mem_int" id="mem_int" onchange="setPret()" class="dropdown" data-settings='{"cutOff": 4}'>
     <option value="Memorie interna" class="label">Memorie interna</option>
-    <option value="64GB" class="label"
-    <%
-    if (request.getParameter("memint").equals("64GB")) {
-        out.println("selected");
-    } else {
-        out.println("asd");
-    }
-%> >64GB</option>
-    <option value="128GB">128GB</option>
-    <option value="256GB" >256GB</option>
-    <option value="512GB" >512GB</option>
+    <option value="64GB" class="label" <%if (request.getParameter("memint").equals("64GB"))out.println("selected");%> >64GB</option>
+    <option value="128GB" <%if (request.getParameter("memint").equals("128GB"))out.println("selected");%> >128GB</option>
+    <option value="256GB" <%if (request.getParameter("memint").equals("256GB"))out.println("selected");%> >256GB</option>
+    <option value="512GB" <%if (request.getParameter("memint").equals("512GB"))out.println("selected");%> >512GB</option>
   </select>
   <select tabindex="4" onchange="setPret()" id="retea" name="retea" class="dropdown" data-settings='{"cutOff": 4}'>
     <option value="Reteaua" class="label">Retea</option>
     <option value="Deblocat" class="label" >Deblocat</option>
-    <option value="Orange">>Orange</option>
+    <option value="Orange">Orange</option>
     <option value="Vodafone" >Vodafone</option>
     <option value="Digi" >Digi</option>
   </select>
   <select tabindex="4" name="cond" onchange="setPret()" id="cond" class="dropdown" data-settings='{"cutOff": 4}'>
     <option value="Conditia telefonului" class="label">Conditia telefonului</option>
-    <option value="Ca_nou" >Ca nou</option>
-    <option value="Excelent" >Excelent</option>
-    <option value="Foarte_bun" >Foarte bun</option>
-    <option value="Bun" >Bun</option>
+    <option value="Ca_nou" <%if (request.getParameter("conditie").equals("Ca_nou"))out.println("selected");%> >Ca nou</option>
+    <option value="Excelent" <%if (request.getParameter("conditie").equals("Excelent"))out.println("selected");%> >Excelent</option>
+    <option value="Foarte_bun" <%if (request.getParameter("conditie").equals("Foarte_bun"))out.println("selected");%> >Foarte bun</option>
+    <option value="Bun" <%if (request.getParameter("conditie").equals("Bun"))out.println("selected");%> >Bun</option>
   </select>
   <label class="pretcss" name="pret" id="pret">&nbsp</label>
   <img style="margin-left:auto;margin-right:auto;max-width: 30rem;height: 30rem;" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/${poza}" alt="symbol image">
   <br>
-  <label class="pretcss" name="pret" id="pret">&nbsp</label>
+  <label class="pretcss" name="stock" id="stock">&nbsp</label>
   <div id="container" style="margin-top:2%;display:none">
   <button class="learn-more">
     <span class="circle" aria-hidden="true">
@@ -244,8 +264,11 @@ h3{
     <span class="button-text">Finalizeaza</span>
   </button>
 </div>
+<%
+String itemsPerPage = request.getParameter("cond");
+out.println("Items: " + itemsPerPage );
+%>
 </form>
-<button onclick="setForm()">Try it</button>
 </div>
 </body>
 </html>

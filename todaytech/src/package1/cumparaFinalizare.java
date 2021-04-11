@@ -28,7 +28,24 @@ public class cumparaFinalizare extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			request.getRequestDispatcher("/WEB-INF/Pages/cumpara/cumparaFinalizare.jsp").forward(request, response);
+			String model=request.getParameter("model"),cond=request.getParameter("cond"),memint=request.getParameter("mem_int"),retea=request.getParameter("retea"),culoare=request.getParameter("culoare");
+			SQL sql = new SQL();
+			System.out.println(request.getParameter("linkbefore"));
+			try {
+				if(sql.existaTelefon(model,cond,memint,retea,culoare)==true) {
+					request.setAttribute("aa", "exista");
+					request.setAttribute("linkbefore", request.getParameter("linkbefore"));
+					request.getRequestDispatcher("/WEB-INF/Pages/cumpara/cumparaFinalizare.jsp").forward(request, response);
+				}else {
+					request.setAttribute("aa", "nu");
+					request.setAttribute("linkbefore", request.getParameter("linkbefore"));
+					request.getRequestDispatcher("/WEB-INF/Pages/cumpara/cumparaFinalizare.jsp").forward(request, response);
+				}
+					
+			} catch (ClassNotFoundException | SQLException | ServletException | IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	}
 
 	/**

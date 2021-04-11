@@ -96,11 +96,12 @@ public class SQL {
 		return email;
 	}
 	
-	public boolean existaTelefon() throws ClassNotFoundException, SQLException {
+	public boolean existaTelefon(String model,String cond,String memint,String retea,String culoare) throws ClassNotFoundException, SQLException {
 		Connection con = getcon();
+		model = model.replaceAll("%20"," ");
+		cond = cond.replaceAll("_", " ");
 	    boolean exista=false;
-	    String asd="iPhone SE 2020";
-		PreparedStatement st = con.prepareStatement("SELECT COUNT(*) FROM TELEFOANE WHERE TRIM(model)='"+asd+"'");
+		PreparedStatement st = con.prepareStatement("SELECT COUNT(*) FROM TELEFOANE WHERE TRIM(model)='"+model.replaceAll("%20"," ")+"' and TRIM(mem_interna)='"+memint+"' and TRIM(culoare)='"+culoare+"' and TRIM(conditie)='"+cond+"'");
 		ResultSet rs = st.executeQuery();
 		rs.next();
 		if(rs.getInt(1)!=0)

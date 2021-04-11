@@ -152,31 +152,6 @@ h3{
 		}
 	};
 	
-	function existaTelefon(){
-		document.getElementById('stock').innerHTML=("Pret: "+
-		<%
-		try {
-		    java.sql.Connection con;
-		    Class.forName("com.mysql.cj.jdbc.Driver");
-		    con = DriverManager.getConnection("jdbc:mysql://46.214.23.220:3430/TodayTech", "todaytech", "a072263819");
-		    boolean exista=false;
-		    String cond = request.getParameter("conditie").replaceAll("_"," ");;
-		    String model=request.getParameter("model").replaceAll("_"," ");
-		    String memint=request.getParameter("memint");
-			PreparedStatement st = con.prepareStatement("SELECT COUNT(*) FROM TELEFOANE WHERE TRIM(model)='"+model+"' and TRIM(conditie)='"+cond+"' and TRIM(mem_interna)='"+memint+"'");
-			ResultSet rs = st.executeQuery();
-			rs.next();
-			if(rs.getInt(1)!=0)
-				exista=true;
-			con.close();
-			out.println(exista);
-		  }
-		  catch(SQLException e) {
-		    out.println("SQLException caught: " +e.getMessage());
-		  }
-		%>);
-	};
-	
 	function setPret()
 	{
 		var s="";
@@ -196,8 +171,7 @@ h3{
 		if(m==0){
 			var x = document.getElementById("container");
 			x.style.display = "none";
-		}else{
-			existaTelefon();
+		}else{	
 			var x = document.getElementById("container");
 			x.style.display = "block";
 			document.getElementById('pret').innerHTML=("Pret: "+s+" lei");
@@ -220,10 +194,11 @@ public String conditie = "";
 %>
 <div class="divsus">
 </div>
+${linkbefore}
 <div class="bara-fundal"><span class="bara" style="width: 60%;"></span></div>
 <h1 style="font-size:50px;text-align:center;margin-top:3%">Configureaza ${model}</h1>
 <div class="configurare">
-<form id="form" class="form" name="form" method="post" type="submit" value="Submit" action="${pageContext.request.contextPath}/cumparaFinalizare?model=${model}&email=${email}">
+<form id="form" class="form" name="form" method="post" type="submit" value="Submit" action="${pageContext.request.contextPath}/cumparaFinalizare?configurare=exista&model=${model}&email=${email}&linkbefore=${linkbefore}">
   <select tabindex="4" name="culoare" id="culoare" onchange="setPret()" class="dropdown" data-settings='{"cutOff": 4}'>
     <option value="Culoare" class="label">Culoare</option>
     <option value="Rosu" class="label">Rosu</option>
@@ -255,19 +230,15 @@ public String conditie = "";
   <label class="pretcss" name="pret" id="pret">&nbsp</label>
   <img style="margin-left:auto;margin-right:auto;max-width: 30rem;height: 30rem;" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/${poza}" alt="symbol image">
   <br>
-  <label class="pretcss" name="stock" id="stock">&nbsp</label>
+  <label class="pretcss" style="margin-top:1%"" name="stock" id="stock">&nbsp</label>
   <div id="container" style="margin-top:2%;display:none">
   <button class="learn-more">
     <span class="circle" aria-hidden="true">
       <span class="icon arrow"></span>
     </span>
-    <span class="button-text">Finalizeaza</span>
+    <span class="button-text" id="final">${text}</span>
   </button>
 </div>
-<%
-String itemsPerPage = request.getParameter("cond");
-out.println("Items: " + itemsPerPage );
-%>
 </form>
 </div>
 </body>

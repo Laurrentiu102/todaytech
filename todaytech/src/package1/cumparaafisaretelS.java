@@ -28,6 +28,12 @@ public class cumparaafisaretelS extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setAttribute("model", request.getParameter("model").replaceAll("_", " "));
 		request.setAttribute("poza",request.getParameter("model").replaceAll("_", "").toLowerCase()+".jpg");
+		StringBuffer requestURL = request.getRequestURL();
+		if (request.getQueryString() != null) {
+		    requestURL.append("?").append(request.getQueryString());
+		}
+		String completeURL = requestURL.toString();
+		request.setAttribute("linkbefore", completeURL);
 		request.getRequestDispatcher("/WEB-INF/Pages/cumpara/configuraremodel.jsp").forward(request, response);
 	}
 

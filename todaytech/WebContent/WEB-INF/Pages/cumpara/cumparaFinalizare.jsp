@@ -19,6 +19,7 @@ h1 {
 </style>
 </head>
 <body>
+${linkbefore}
 <div style="width:40%;display: block;margin-left: auto;margin-right: auto;margin-top:30%">
 <div class="success-checkmark" style="margin: 0;position: absolute;top: 45%;left: 46%;">
   <div class="check-icon">

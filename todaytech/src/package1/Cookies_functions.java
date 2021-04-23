@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.lang3.RandomStringUtils;
 
 public class Cookies_functions {
-	
+	//
 	public void deleteCookie(HttpServletRequest request, HttpServletResponse response) throws NoSuchAlgorithmException, ClassNotFoundException, SQLException {
 		Cookie cookievalidator = new Cookie("validator","");
 		cookievalidator.setMaxAge(0);

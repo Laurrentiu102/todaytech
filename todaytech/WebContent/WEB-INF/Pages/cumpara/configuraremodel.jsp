@@ -13,7 +13,7 @@
 		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="${pageContext.request.contextPath}/Resurse/jquery.easydropdown.js"></script>
-<title>Insert title here</title>
+<title>TodayTech</title>
 <style>
 
 
@@ -146,8 +146,15 @@ h3{
 		const email = urlParams.get('email');
 		const cond = urlParams.get('conditie');
 		const memint = urlParams.get('memint');
+		const poza=urlParams.get('poza');
 		for(var i=0;i<document.getElementsByTagName("form").length;i++){
-			var a=(document.getElementsByTagName("form")[i].action+email).substring((document.getElementsByTagName("form")[i].action+email).indexOf("/todaytech/"));
+			a=document.getElementsByTagName("form")[i].action.replace(/Poza/g,poza);
+			document.getElementsByTagName("form")[i].setAttribute("action", a); 
+		}
+		for(var i=0;i<document.getElementsByTagName("form").length;i++){
+			var a;
+			a=(document.getElementsByTagName("form")[i].action+email).substring(0,(document.getElementsByTagName("form")[i].action+email).lastIndexOf("="));
+			a=a+"="+email;
 			document.getElementsByTagName("form")[i].setAttribute("action", a); 
 		}
 	};
@@ -178,7 +185,54 @@ h3{
 			var a="";
 			
 			for(var i=0;i<document.getElementsByTagName("form").length;i++){
-				var a=(document.getElementsByTagName("form")[i].action+"&pret="+s).substring((document.getElementsByTagName("form")[i].action+"&pret="+s).indexOf("/todaytech/"));
+				a=document.getElementsByTagName("form")[i].action.replace(/Orange/g,form.retea[form.retea.selectedIndex].text);
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+				a=document.getElementsByTagName("form")[i].action.replace(/Deblocat/g,form.retea[form.retea.selectedIndex].text);
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+				a=document.getElementsByTagName("form")[i].action.replace(/Vodafone/g,form.retea[form.retea.selectedIndex].text);
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+				a=document.getElementsByTagName("form")[i].action.replace(/Digi/g,form.retea[form.retea.selectedIndex].text);
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+				a=document.getElementsByTagName("form")[i].action.replace(/Retea/g,form.retea[form.retea.selectedIndex].text);
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+			}
+			
+			for(var i=0;i<document.getElementsByTagName("form").length;i++){
+				a=document.getElementsByTagName("form")[i].action.replace(/Culoare/g,form.culoare[form.culoare.selectedIndex].text);
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+				a=document.getElementsByTagName("form")[i].action.replace(/Rosu/g,form.culoare[form.culoare.selectedIndex].text);
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+				a=document.getElementsByTagName("form")[i].action.replace(/Alb/g,form.culoare[form.culoare.selectedIndex].text);
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+				a=document.getElementsByTagName("form")[i].action.replace(/Negru/g,form.culoare[form.culoare.selectedIndex].text);
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+				a=document.getElementsByTagName("form")[i].action.replace(/Gri/g,form.culoare[form.culoare.selectedIndex].text);
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+			}
+			
+			for(var i=0;i<document.getElementsByTagName("form").length;i++){
+				a=document.getElementsByTagName("form")[i].action.replace(/Memint/g,form.mem_int[form.mem_int.selectedIndex].text);
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+				a=document.getElementsByTagName("form")[i].action.replace(/64GB/g,form.mem_int[form.mem_int.selectedIndex].text)
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+				a=document.getElementsByTagName("form")[i].action.replace(/128GB/g,form.mem_int[form.mem_int.selectedIndex].text)
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+				a=document.getElementsByTagName("form")[i].action.replace(/256GB/g,form.mem_int[form.mem_int.selectedIndex].text)
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+				a=document.getElementsByTagName("form")[i].action.replace(/512GB/g,form.mem_int[form.mem_int.selectedIndex].text)
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+			}
+			
+			for(var i=0;i<document.getElementsByTagName("form").length;i++){
+				a=document.getElementsByTagName("form")[i].action.replace(/Conditie/g,form.cond[form.cond.selectedIndex].text);
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+				a=document.getElementsByTagName("form")[i].action.replace(/Ca%20nou/g,form.cond[form.cond.selectedIndex].text);
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+				a=document.getElementsByTagName("form")[i].action.replace(/Excelent/g,form.cond[form.cond.selectedIndex].text);
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+				a=document.getElementsByTagName("form")[i].action.replace(/Foarte%20bun/g,form.cond[form.cond.selectedIndex].text);
+				document.getElementsByTagName("form")[i].setAttribute("action", a); 
+				a=document.getElementsByTagName("form")[i].action.replace(/Bun/g,form.cond[form.cond.selectedIndex].text);
 				document.getElementsByTagName("form")[i].setAttribute("action", a); 
 			}
 		}
@@ -186,32 +240,25 @@ h3{
 </script>
 </head>
 <body>
-<%!
-public String culoare = "";
-public String model = "";
-public String retea = "";
-public String conditie = "";
-%>
 <div class="divsus">
 </div>
-${linkbefore}
 <div class="bara-fundal"><span class="bara" style="width: 60%;"></span></div>
 <h1 style="font-size:50px;text-align:center;margin-top:3%">Configureaza ${model}</h1>
 <div class="configurare">
-<form id="form" class="form" name="form" method="post" type="submit" value="Submit" action="${pageContext.request.contextPath}/cumparaFinalizare?configurare=exista&model=${model}&email=${email}&linkbefore=${linkbefore}">
+<form id="form" class="form" name="form" method="post" type="submit" value="Submit" action="${pageContext.request.contextPath}/existaTelefonS?retea=Retea&culoare=Culoare&cond=Conditie&memint=Memint&poza=Poza&model=${model}&email=${email}">
   <select tabindex="4" name="culoare" id="culoare" onchange="setPret()" class="dropdown" data-settings='{"cutOff": 4}'>
     <option value="Culoare" class="label">Culoare</option>
-    <option value="Rosu" class="label">Rosu</option>
+    <option value="Rosu">Rosu</option>
     <option value="Alb" >Alb</option>
     <option value="Negru" >Negru</option>
     <option value="Gri" >Gri</option>
   </select>
   <select tabindex="4" name="mem_int" id="mem_int" onchange="setPret()" class="dropdown" data-settings='{"cutOff": 4}'>
-    <option value="Memorie interna" class="label">Memorie interna</option>
-    <option value="64GB" class="label" <%if (request.getParameter("memint").equals("64GB"))out.println("selected");%> >64GB</option>
-    <option value="128GB" <%if (request.getParameter("memint").equals("128GB"))out.println("selected");%> >128GB</option>
-    <option value="256GB" <%if (request.getParameter("memint").equals("256GB"))out.println("selected");%> >256GB</option>
-    <option value="512GB" <%if (request.getParameter("memint").equals("512GB"))out.println("selected");%> >512GB</option>
+    <option value="Memint" class="label">Memorie interna</option>
+    <option value="64GB"<%try{if (request.getParameter("memint").equals("64GB"))out.println("selected");}catch(Exception e){}%> >64GB</option>
+    <option value="128GB"  <%try{if (request.getParameter("memint").equals("128GB"))out.println("selected");}catch(Exception e){}%> >128GB</option>
+    <option value="256GB"  <%try{if (request.getParameter("memint").equals("256GB"))out.println("selected");}catch(Exception e){}%> >256GB</option>
+    <option value="512GB"  <%try{if (request.getParameter("memint").equals("512GB"))out.println("selected");}catch(Exception e){}%> >512GB</option>
   </select>
   <select tabindex="4" onchange="setPret()" id="retea" name="retea" class="dropdown" data-settings='{"cutOff": 4}'>
     <option value="Reteaua" class="label">Retea</option>
@@ -222,13 +269,13 @@ ${linkbefore}
   </select>
   <select tabindex="4" name="cond" onchange="setPret()" id="cond" class="dropdown" data-settings='{"cutOff": 4}'>
     <option value="Conditia telefonului" class="label">Conditia telefonului</option>
-    <option value="Ca_nou" <%if (request.getParameter("conditie").equals("Ca_nou"))out.println("selected");%> >Ca nou</option>
-    <option value="Excelent" <%if (request.getParameter("conditie").equals("Excelent"))out.println("selected");%> >Excelent</option>
-    <option value="Foarte_bun" <%if (request.getParameter("conditie").equals("Foarte_bun"))out.println("selected");%> >Foarte bun</option>
-    <option value="Bun" <%if (request.getParameter("conditie").equals("Bun"))out.println("selected");%> >Bun</option>
+    <option value="Ca_nou" <%try{if (request.getParameter("cond").equals("Ca_nou"))out.println("selected");}catch(Exception e){}%> >Ca nou</option>
+    <option value="Excelent" <%try{if (request.getParameter("cond").equals("Excelent"))out.println("selected");}catch(Exception e){}%> >Excelent</option>
+    <option value="Foarte_bun" <%try{if (request.getParameter("cond").equals("Foarte_bun"))out.println("selected");}catch(Exception e){}%> >Foarte bun</option>
+    <option value="Bun" <%try{if (request.getParameter("cond").equals("Bun"))out.println("selected");}catch(Exception e){}%> >Bun</option>
   </select>
   <label class="pretcss" name="pret" id="pret">&nbsp</label>
-  <img style="margin-left:auto;margin-right:auto;max-width: 30rem;height: 30rem;" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/${poza}" alt="symbol image">
+  <img style="margin-left:auto;margin-right:auto;max-width: 30rem;height: 30rem;" src="${pageContext.request.contextPath}/Resurse/PozeTelefoane/<%out.println(request.getParameter("poza"));%>" alt="symbol image">
   <br>
   <label class="pretcss" style="margin-top:1%"" name="stock" id="stock">&nbsp</label>
   <div id="container" style="margin-top:2%;display:none">
@@ -236,7 +283,7 @@ ${linkbefore}
     <span class="circle" aria-hidden="true">
       <span class="icon arrow"></span>
     </span>
-    <span class="button-text" id="final">${text}</span>
+    <span class="button-text" id="final">Verifica stock</span>
   </button>
 </div>
 </form>

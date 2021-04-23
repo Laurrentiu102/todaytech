@@ -11,7 +11,7 @@
 		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="${pageContext.request.contextPath}/Resurse/jquery.easydropdown.js"></script>
-<title>Insert title here</title>
+<title>TodayTech</title>
 <style>
 
 

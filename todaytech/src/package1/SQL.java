@@ -110,6 +110,14 @@ public class SQL {
 		return exista;
 	}
 	
+	public void stergeTelefon(String model,String cond,String memint,String retea,String culoare) throws ClassNotFoundException, SQLException {
+		Connection con = getcon();
+		model = model.replaceAll("%20"," ");
+		cond = cond.replaceAll("_", " ");
+		PreparedStatement st = con.prepareStatement("DELETE FROM TELEFOANE WHERE TRIM(model)='"+model.replaceAll("%20"," ")+"' and TRIM(mem_interna)='"+memint+"' and TRIM(culoare)='"+culoare+"' and TRIM(conditie)='"+cond+"'");
+		st.executeUpdate();
+	}
+	
 	public boolean checkUserExists(String email) throws ClassNotFoundException, SQLException {
 		boolean exista=false;
 		Connection con = getcon();

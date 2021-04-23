@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Resurse/galerieimagini.css"/>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/Resurse/vindemodel.css">
-<title>Insert title here</title>
+<title>TodayTech</title>
 <script>
 	window.onload = function() {
 		const queryString = window.location.search;

@@ -13,8 +13,8 @@ public class SQL {
 	private Connection getcon() throws SQLException, ClassNotFoundException {
 			String myDriver = "com.mysql.cj.jdbc.Driver";
 			Class.forName(myDriver);
-			String host="jdbc:mysql://46.214.23.220:3430/TodayTech";
-			String user="todaytech";
+			String host="jdbc:mysql://localhost:3306/TodayTech";
+			String user="root";
 			String password="a072263819";
 			//"jdbc:mysql://46.214.23.220:3306"
 			Connection con=DriverManager.getConnection(host,user,password);

@@ -295,7 +295,7 @@ public class registerS extends HttpServlet {
 				SQL sql = new SQL();
 				Hash h = new Hash();
 				sql.addUser(request.getParameter("nume"), request.getParameter("prenume"), request.getParameter("email"), request.getParameter("nrtel"), h.genHash(request.getParameter("password")));
-				request.getRequestDispatcher("/WEB-INF/Pages/cont_inregistrat/cont_inregistrat_succes.jsp").forward(request, response);
+				request.getRequestDispatcher("/loginS").forward(request, response);
 			}catch(Exception e) {
 				request.getRequestDispatcher("/WEB-INF/Pages/cont_inregistrat/cont_inregistrat_eroare.jsp").forward(request, response);
 			}

@@ -2,6 +2,7 @@ package package1;
 
 import javax.servlet.http.Cookie;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 import java.sql.SQLException;
 
@@ -67,7 +68,7 @@ public class loginS extends HttpServlet {
 		request.setAttribute("vis", "hidden");
 		request.setAttribute("text", "");
 	}
-	protected boolean verificareCont(HttpServletRequest request, HttpServletResponse response) throws NoSuchAlgorithmException, ClassNotFoundException, SQLException {
+	protected boolean verificareCont(HttpServletRequest request, HttpServletResponse response) throws NoSuchAlgorithmException, ClassNotFoundException, SQLException, UnsupportedEncodingException {
 		Hash h = new Hash();
 		String parola=h.genHash(request.getParameter("password"));
 		SQL sql = new SQL();

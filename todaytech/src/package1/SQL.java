@@ -6,20 +6,23 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class SQL {
 
 	private Connection getcon() throws SQLException, ClassNotFoundException {
-			String myDriver = "com.mysql.cj.jdbc.Driver";
+		
+			String myDriver = "org.sqlite.JDBC";
 			Class.forName(myDriver);
-			String host="jdbc:mysql://localhost:3306/TodayTech";
-			String user="root";
-			String password="a072263819";
-			//"jdbc:mysql://46.214.23.220:3306"
-			Connection con=DriverManager.getConnection(host,user,password);
+			
+			Connection con = null;
+			String url ="jdbc:sqlite:" + this.getClass().getResource("/").getPath() + "todaytech.db";
+			System.out.println(url);
+			//System.out.println(url);
+			con = DriverManager.getConnection(url);
+			
 			return con;
 	}
+	
 	public void adaugaTelefon(String brand,String model,String mem_interna,String pret,String culoare,String retea,String conditie,String id_vanzator) throws ClassNotFoundException {
 		try {
 			Connection con = getcon();

@@ -40,8 +40,8 @@ window.onload = function() {
 					</li> 
 					<li class="filter"><a class="selected" href="#0">All</a></li>
 					<li class="filter" data-filter=".Apple"><a href="#0">Apple</a></li>
-					<li class="filter" data-filter=".color-2"><a href="#0">Samsung</a></li>
-					<li class="filter" data-filter=".color-3"><a href="#0">Huawei</a></li>
+					<li class="filter" data-filter=".Samsung"><a href="#0">Samsung</a></li>
+					<li class="filter" data-filter=".Huawei"><a href="#0">Huawei</a></li>
 				</ul>
 			</div>
 		</div>

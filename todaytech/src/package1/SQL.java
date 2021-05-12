@@ -15,10 +15,13 @@ public class SQL {
 			Class.forName(myDriver);
 			
 			Connection con = null;
-			String url ="jdbc:sqlite:" + this.getClass().getResource("/").getPath() + "todaytech.db";
-			System.out.println(url);
+			String url ="jdbc:sqlite:" + this.getClass().getResource("/").getPath().substring(1);
+			String urls[] = url.split("classes");
+			urls[0]=urls[0] + "todaytech.db";
+			urls[0]=urls[0].replaceAll("%20", " ");
+			System.out.println(urls[0]);
 			//System.out.println(url);
-			con = DriverManager.getConnection(url);
+			con = DriverManager.getConnection(urls[0]);
 			
 			return con;
 	}

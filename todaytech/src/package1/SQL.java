@@ -19,7 +19,6 @@ public class SQL {
 			String urls[] = url.split("classes");
 			urls[0]=urls[0] + "todaytech.db";
 			urls[0]=urls[0].replaceAll("%20", " ");
-			System.out.println(urls[0]);
 			//System.out.println(url);
 			con = DriverManager.getConnection(urls[0]);
 			

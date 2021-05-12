@@ -5,6 +5,7 @@
 <head>
 <link href="${pageContext.request.contextPath}/Resurse/styleMaincumparasivinde.css" rel="stylesheet" type="text/css">
 <title>TodayTech</title>
+<link rel="icon" href="${pageContext.request.contextPath}/Resurse/ttlogo.png">
 <style>
 html, body {margin: 0; height: 100%; overflow: hidden}
 .navbar {

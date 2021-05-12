@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="icon" href="${pageContext.request.contextPath}/Resurse/ttlogo.png">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Resurse/vindeFinalizare.css"/>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Resurse/finalizeazaButton.css">
 <title>TodayTech</title>

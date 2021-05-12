@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="icon" href="${pageContext.request.contextPath}/Resurse/ttlogo.png">
   <meta charset="UTF-8">
   <title>TodayTech</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'><link rel="stylesheet" href="${pageContext.request.contextPath}/Resurse/styleRegister.css">
